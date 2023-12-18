@@ -1,0 +1,47 @@
+.header {
+    /* opacity: 0.1; */
+    background: var(--Accent-1, #442862);
+    background-image: url(./images/header-bg.png);
+    background-position: center;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    padding: 44px 0;
+
+}
+
+.header-title {
+    color: #FFF;
+
+    /* Large Text - Medium */
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    /* 125% */
+}
+
+.home-link {
+    color: #B5A8C2;
+
+    /* Normal Text - Regular */
+    /* font-family: Poppins; */
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 117.647% */
+}
+
+.link-title {
+    color: #FFF;
+
+    /* Normal Text - Medium */
+    /* font-family: Poppins; */
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 117.647% */
+}
