@@ -105,6 +105,20 @@
   /* 117.647% */
 }
 
+.thm-btn {
+  padding: 17px 33px;
+  border-radius: 23.132px;
+  background: var(--Primary, #6BCB77);
+  color: #FFF;
+
+
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  /* 117.647% */
+}
+
 
 @media (max-width: 650px) {
   .container {

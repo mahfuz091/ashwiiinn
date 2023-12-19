@@ -11,7 +11,7 @@ import ProductImage from "../Steps/ProductImage";
 import Stepper from "../Stepper/Stepper";
 
 const MultistepForm = () => {
-  const [currentStep, setCurrentStep] = useState(3);
+  const [currentStep, setCurrentStep] = useState(4);
   const steps = [
     "Add a Product",
     "Product Specification",
@@ -49,7 +49,7 @@ const MultistepForm = () => {
   };
   return (
     <div className='mx-auto container'>
-      <Stepper currentStep={currentStep} steps={steps} />
+      <Stepper setCurrentStep={setCurrentStep} currentStep={currentStep} steps={steps} />
       {displayStep(currentStep)}
     </div>
   );
