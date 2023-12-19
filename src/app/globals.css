@@ -70,8 +70,39 @@
   cursor: pointer;
 }
 
+.checkbox-round::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid transparent;
+  width: 22px;
+  height: 22px;
+}
+
+.checkbox-round:checked::after {
+  border-color: #6BCB77;
+}
+
 .checkbox-round:checked {
-  background-color: green;
+  background-color: #6BCB77;
+}
+
+.date-picker {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url(/Calendar.svg);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.input-primary::placeholder {
+  color: var(--Dark, #000);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  /* 117.647% */
 }
 
 

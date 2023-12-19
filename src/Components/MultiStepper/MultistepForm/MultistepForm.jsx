@@ -11,7 +11,7 @@ import ProductImage from "../Steps/ProductImage";
 import Stepper from "../Stepper/Stepper";
 
 const MultistepForm = () => {
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(3);
   const steps = [
     "Add a Product",
     "Product Specification",
@@ -28,7 +28,7 @@ const MultistepForm = () => {
       case 2:
         return <ProductSpec onSubmit={onSubmit}></ProductSpec>;
       case 3:
-        return <Inventory></Inventory>;
+        return <Inventory onSubmit={onSubmit}></Inventory>;
       case 4:
         return <Strains></Strains>;
       case 5:
