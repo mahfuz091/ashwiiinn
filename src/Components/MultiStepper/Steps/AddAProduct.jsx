@@ -2,7 +2,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const AddAProduct = ({ onSubmit }) => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, getValues,
+    onChange, } = useForm();
   return (
     <div>
       <div className='addproduct-header  flex justify-between items-center'>
@@ -31,8 +32,8 @@ const AddAProduct = ({ onSubmit }) => {
         <div className="md:grid md:grid-cols-2 md:gap-x-[42px] md:gap-y-[30px]">
           <div className='form-control w-full'>
             <label htmlFor=''>Brand</label>
-            <select className='w-full input-primary' name="" id="">
-              <option value="">Moon Dust</option>
+            <select className='w-full input-primary' name="" id="" {...register("brand")}>
+              <option value="Moon Dust">Moon Dust</option>
             </select>
             <p className='mt-[14px] text-[13px] text-[#535353] font-normal'>Do you have more than on brand? Contact sales@leaflink.com to learn how to make them stand out for Leaflink shoppers.</p>
 
@@ -41,7 +42,7 @@ const AddAProduct = ({ onSubmit }) => {
             <label htmlFor=''>Product Line</label>
             <input
               className='w-full input-primary'
-              {...register("field1")}
+              {...register("ProductLine")}
 
             />
             <p className='mt-[14px] text-[13px] text-[#535353] font-normal w-full'>Associate a product line with product. Your shop brand page will group together products in the same product line.</p>
@@ -51,7 +52,7 @@ const AddAProduct = ({ onSubmit }) => {
             <label htmlFor=''>Product Name*</label>
             <input
               className='w-full input-primary'
-              {...register("field1")}
+              {...register("ProductName")}
 
             />
             <div className='flex gap-[10px] mt-[19px]'>
@@ -61,10 +62,10 @@ const AddAProduct = ({ onSubmit }) => {
 
           </div>
           <div className='form-control w-full'>
-            <label htmlFor=''>Product Product SKU</label>
+            <label htmlFor=''>Product SKU</label>
             <input
               className='w-full input-primary'
-              {...register("field1")}
+              {...register("ProductSku")}
 
             />
 

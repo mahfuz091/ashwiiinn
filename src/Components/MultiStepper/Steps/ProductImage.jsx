@@ -39,17 +39,18 @@ const ProductImage = () => {
     }
   };
   return (
-    <div>
+    <div className="mb-[65px]">
       ProductImage
       <form action='' className='form-container'>
         <div>
-          <h3>Upload Images</h3>
+
           <div
             style={{
-              border: "2px dashed #ccc",
-              padding: "20px",
+              border: "1px dashed #9B9B9B",
+              padding: "98px",
               textAlign: "center",
               cursor: "pointer",
+              borderRadius: "10px",
             }}
             onDrop={handleDrop}
             onDragOver={handleDragOver}
@@ -64,7 +65,7 @@ const ProductImage = () => {
             />
             <label
               htmlFor='fileInput'
-              className='flex flex-col items-center cursor-pointer '
+              className='flex flex-col items-center cursor-pointer gap-[30px]'
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -86,8 +87,9 @@ const ProductImage = () => {
             </label>
           </div>
 
-          <div className='border-emerald-500 border-2 w-64 h-64 bg-slate-500'>
-            {selectedImages.length > 0 && (
+          <div className='md:grid grid-cols-4 gap-[38px] mt-[40px]'>
+            <div className='border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
+              {/* {selectedImages.length > 0 && (
               <div>
                 <div style={{ display: "flex", flexWrap: "wrap" }}>
                   {selectedImages.map((image, index) => (
@@ -104,8 +106,63 @@ const ProductImage = () => {
                   ))}
                 </div>
               </div>
-            )}
+            )} */}
+              {selectedImages.length > 0 && (
+                <img
+                  className="w-[260px] h-[155px]"
+                  src={URL.createObjectURL(selectedImages[0])}
+                  alt='l'
+
+                />
+              )}
+            </div>
+            <div className='border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
+
+              {selectedImages.length > 1 && (
+                <img
+                  className="w-[260px] h-[155px]"
+                  src={URL.createObjectURL(selectedImages[1])}
+                  alt='l'
+
+                />
+              )}
+            </div>
+            <div className='border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
+
+              {selectedImages.length > 2 && (
+                <img
+                  className="w-[260px] h-[155px]"
+                  src={URL.createObjectURL(selectedImages[2])}
+                  alt='l'
+
+                />
+              )}
+            </div>
+            <div className='border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
+
+              {selectedImages.length > 3 && (
+                <img
+                  className="w-[260px] h-[155px]"
+                  src={URL.createObjectURL(selectedImages[3])}
+                  alt='l'
+
+                />
+              )}
+            </div>
+
+
           </div>
+          <ul className="marker:text-[#6BCB77] mt-[40px] list-disc pl-[25px] ">
+            <li className="text-[#000] text-[20px] font-medium">700 x 384 minimum dimensions</li>
+            <li className="text-[#000] text-[20px] font-medium">10mb Maximum file size</li>
+            <li className="text-[#000] text-[20px] font-medium">Avoid using logos for product images</li>
+            <li className="text-[#000] text-[20px] font-medium">Rearrange images by dragging photo</li>
+          </ul>
+        </div>
+
+        <div className="btn-group flex gap-6 mt-[40px]">
+          <input type="submit" value="Save" className="thm-btn" />
+          <button className="btn-secondary">Cancel</button>
         </div>
       </form>
     </div>

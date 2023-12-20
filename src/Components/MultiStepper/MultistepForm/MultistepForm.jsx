@@ -11,7 +11,7 @@ import ProductImage from "../Steps/ProductImage";
 import Stepper from "../Stepper/Stepper";
 
 const MultistepForm = () => {
-  const [currentStep, setCurrentStep] = useState(7);
+  const [currentStep, setCurrentStep] = useState(5);
   const steps = [
     "Add a Product",
     "Product Specification",

@@ -61,12 +61,15 @@
   cursor: pointer;
 }
 
-.checkbox-round::after {
+.checkbox-round:checked:after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   border: 2px solid transparent;
+  border-radius: 50%;
+  top: -4px;
+  left: -4px;
   width: 22px;
   height: 22px;
 }
@@ -76,7 +79,14 @@
 }
 
 .checkbox-round:checked {
-  background-color: #6bcb77;
+
+  background: #6bcb77 !important;
+  border-radius: 50%;
+  height: 16px !important;
+  margin-right: 1px;
+  position: relative;
+  width: 16px !important;
+
 }
 
 .date-picker {
@@ -106,6 +116,20 @@
   font-weight: 600;
   line-height: 20px;
   /* 117.647% */
+  cursor: pointer;
+}
+
+.btn-secondary {
+  padding: 15px 33px;
+  border-radius: 50px;
+  border: 1px solid var(--Dark, #000);
+  color: var(--Dark, #000);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  /* 117.647% */
+  cursor: pointer;
 }
 
 @media (max-width: 650px) {
@@ -118,4 +142,40 @@
   .form-control {
     margin: 20px 0;
   }
+}
+
+/* text Editor */
+.ql-toolbar.ql-snow {
+  padding: 15px !important;
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+.ql-toolbar.ql-snow {
+  border-radius: 6px !important;
+  border: 1px solid #D7D7D7 !important;
+  background: #F5F5F5 !important;
+}
+
+.ql-snow.ql-toolbar button,
+.ql-snow .ql-toolbar button {
+  width: 36.129px;
+  height: 31.236px;
+  background-color: #fff !important;
+  border: 1px solid #919191 !important;
+  margin-right: 11px !important;
+  border-radius: 3px !important;
+}
+
+.ql-toolbar.ql-snow .ql-formats {
+  margin-right: 0 !important;
+}
+
+@media (max-width: 450px) {
+  .ql-toolbar.ql-snow .ql-formats {
+    margin: 5px;
+  }
+
 }

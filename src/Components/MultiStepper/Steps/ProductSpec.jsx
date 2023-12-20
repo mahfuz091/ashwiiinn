@@ -10,15 +10,16 @@ const ProductSpec = ({ onSubmit }) => {
         <div className='md:grid grid-cols-3 gap-[44px]'>
           <div className='form-control w-full'>
             <label htmlFor=''>Product Category*</label>
-            <select className='w-full input-primary' name="" id="">
-              <option value="">Flower</option>
+            <select className='w-full input-primary' name="" id="" defaultValue="Flower" {...register("Category")}>
+              <option value="Flower">Flower</option>
             </select>
 
           </div>
           <div className='form-control w-full'>
             <label htmlFor=''>Product Subcategory*</label>
-            <select className='w-full input-primary' name="" id="">
+            <select className='w-full input-primary' name="" id="" defaultValue="Flower" {...register("SubCategory")}>
               <option value="">---------</option>
+              <option value="Rose">Rose</option>
             </select>
 
           </div>
