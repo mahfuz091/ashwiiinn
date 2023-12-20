@@ -1,7 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import 'quill/dist/quill.snow.css'
-import ReactQuill from 'react-quill'
+// import ReactQuill from 'react-quill'
+import dynamic from 'next/dynamic'
+
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 const ProductDescriptions = () => {
   const { register, handleSubmit } = useForm();

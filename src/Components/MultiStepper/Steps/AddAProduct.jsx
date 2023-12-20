@@ -75,8 +75,8 @@ const AddAProduct = ({ onSubmit }) => {
             <h2 className=" text-[13px] text-[#fff] font-normal leading-[23px]">Buyers will have a choice of package sizes, flavors, or stains when shopping this product. The values you enter will automatically populate to all varieties , except where you overwrite them individually.</h2>
             <div className="absolute top-2 right-2"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
               <circle cx="14.1074" cy="14.2344" r="13.9043" fill="#624285" />
-              <path d="M10.4297 10.5566L17.7853 17.9123" stroke="white" stroke-linecap="round" />
-              <path d="M17.7852 10.5566L10.4295 17.9123" stroke="white" stroke-linecap="round" />
+              <path d="M10.4297 10.5566L17.7853 17.9123" stroke="white" strokeLinecap="round" />
+              <path d="M17.7852 10.5566L10.4295 17.9123" stroke="white" strokeLinecap="round" />
             </svg></div>
           </div>
           <div className='form-control w-full'>
