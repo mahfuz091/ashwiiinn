@@ -67,7 +67,7 @@ const VolumeDiscounts = () => {
                 value='option1'
                 checked={selectedOption === "option1"}
                 onChange={handleOptionChange}
-                className='mr-3'
+                className='mr-3 checkbox-round checked:mr-[13px]'
               />
               Featured Product
               <p className='text-[13px] text-[#535353] font-normal ml-[26px] max-w-[456px]'>
@@ -84,7 +84,7 @@ const VolumeDiscounts = () => {
                 value='option2'
                 checked={selectedOption === "option2"}
                 onChange={handleOptionChange}
-                className='mr-3'
+                className='mr-3 checkbox-round checked:mr-[13px]'
               />
               Show Inventory Quantity to Buyers
               <p className='text-[13px] text-[#535353] font-normal ml-[26px] max-w-[456px]'>
