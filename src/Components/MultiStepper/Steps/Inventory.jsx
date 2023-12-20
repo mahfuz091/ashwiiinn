@@ -3,13 +3,17 @@ import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useForm } from "react-hook-form";
 
-const Inventory = ({ onSubmit }) => {
+const Inventory = ({ onSubmit, currentStep, setCurrentStep }) => {
   const [startDate, setStartDate] = useState("");
   const { register, handleSubmit } = useForm();
   return (
-    <div>
+    <div className='mb-[65px]'>
       <h4 className='text-[#000] text-[30px] font-semibold'>Inventory</h4>
-      <form className='form-container' action=''>
+      <form
+        className='form-container'
+        action=''
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className='md:grid grid-cols-3 gap-[44px]'>
           <div className='form-control w-full flex flex-col'>
             <label className='w-full' htmlFor=''>
@@ -96,6 +100,17 @@ const Inventory = ({ onSubmit }) => {
               </p>
             </div>
           </div>
+        </div>
+        <div className='mt-[40px] flex justify-between '>
+          <button
+            className='thm-btn'
+            onClick={() => setCurrentStep(currentStep - 1)}
+          >
+            Prev
+          </button>
+          <button className='thm-btn ' type='submit'>
+            Next
+          </button>
         </div>
       </form>
     </div>

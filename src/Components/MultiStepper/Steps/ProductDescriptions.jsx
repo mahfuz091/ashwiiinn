@@ -1,50 +1,84 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import 'quill/dist/quill.snow.css'
+import "quill/dist/quill.snow.css";
 // import ReactQuill from 'react-quill'
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
-const ProductDescriptions = () => {
+const ProductDescriptions = ({ onSubmit, currentStep, setCurrentStep }) => {
   const { register, handleSubmit } = useForm();
   var modules = {
     toolbar: [
-
-      ["bold", "italic", "underline",], [{ align: 'center' }, { align: 'right' }, { align: 'justify' }],
+      ["bold", "italic", "underline"],
+      [{ align: "center" }, { align: "right" }, { align: "justify" }],
 
       ["link"],
 
-      [{ "color": ["#000000", "#e60000", "#ff9900", "#ffff00", "#008a00", "#0066cc", "#9933ff", "#ffffff", "#facccc", "#ffebcc", "#ffffcc", "#cce8cc", "#cce0f5", "#ebd6ff", "#bbbbbb", "#f06666", "#ffc266", "#ffff66", "#66b966", "#66a3e0", "#c285ff", "#888888", "#a10000", "#b26b00", "#b2b200", "#006100", "#0047b2", "#6b24b2", "#444444", "#5c0000", "#663d00", "#666600", "#003700", "#002966", "#3d1466", 'custom-color'] }],
-    ]
+      [
+        {
+          color: [
+            "#000000",
+            "#e60000",
+            "#ff9900",
+            "#ffff00",
+            "#008a00",
+            "#0066cc",
+            "#9933ff",
+            "#ffffff",
+            "#facccc",
+            "#ffebcc",
+            "#ffffcc",
+            "#cce8cc",
+            "#cce0f5",
+            "#ebd6ff",
+            "#bbbbbb",
+            "#f06666",
+            "#ffc266",
+            "#ffff66",
+            "#66b966",
+            "#66a3e0",
+            "#c285ff",
+            "#888888",
+            "#a10000",
+            "#b26b00",
+            "#b2b200",
+            "#006100",
+            "#0047b2",
+            "#6b24b2",
+            "#444444",
+            "#5c0000",
+            "#663d00",
+            "#666600",
+            "#003700",
+            "#002966",
+            "#3d1466",
+            "custom-color",
+          ],
+        },
+      ],
+    ],
   };
-  var formats = [
-    "bold", "italic",
-    "underline", "align",
-    "color",
-    "link",
-  ];
+  var formats = ["bold", "italic", "underline", "align", "color", "link"];
   const handleProcedureContentChange = (content) => {
     console.log("content---->", content);
   };
   return (
     <div className='mb-[63px]'>
       <h4 className='text-[#000] text-[30px] font-semibold'>Product Details</h4>
-      <form action=''>
-        <div >
+      <form action='' onSubmit={handleSubmit(onSubmit)}>
+        <div>
           <div className='w-full' style={{ display: "grid" }}>
             <ReactQuill
-              theme="snow"
+              theme='snow'
               modules={modules}
               formats={formats}
-              placeholder="write your content ...."
+              placeholder='write your content ....'
               onChange={handleProcedureContentChange}
               style={{ height: "380px", width: "100%" }}
               className='form-container w-full'
-            >
-            </ReactQuill>
+            ></ReactQuill>
           </div>
-
         </div>
         <p className='text-[15px] text-[#535353] font-normal mt-[24px]'>
           Enter a product description. Include all the details you can.
@@ -120,6 +154,17 @@ const ProductDescriptions = () => {
               <option value=''>--------</option>
             </select>
           </div>
+        </div>
+        <div className='mt-[40px] flex justify-between '>
+          <button
+            className='thm-btn'
+            onClick={() => setCurrentStep(currentStep - 1)}
+          >
+            Prev
+          </button>
+          <button className='thm-btn ' type='submit'>
+            Next
+          </button>
         </div>
       </form>
     </div>

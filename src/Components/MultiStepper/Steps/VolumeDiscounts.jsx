@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
-const VolumeDiscounts = () => {
+const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
   const { register, handleSubmit } = useForm();
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -13,7 +13,7 @@ const VolumeDiscounts = () => {
       <h4 className='text-[#000] text-[30px] font-semibold'>
         Volume Discounts
       </h4>
-      <form action=''>
+      <form action='' onSubmit={handleSubmit(onSubmit)}>
         <div className='form-container'>
           <div className='md:grid grid-cols-3'>
             <div className='form-control w-full'>
@@ -136,6 +136,17 @@ const VolumeDiscounts = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className='mt-[40px] flex justify-between '>
+          <button
+            className='thm-btn'
+            onClick={() => setCurrentStep(currentStep - 1)}
+          >
+            Prev
+          </button>
+          <button className='thm-btn ' type='submit'>
+            Next
+          </button>
         </div>
       </form>
     </div>

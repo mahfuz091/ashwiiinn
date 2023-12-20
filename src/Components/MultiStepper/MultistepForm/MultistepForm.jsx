@@ -24,19 +24,61 @@ const MultistepForm = () => {
   const displayStep = (step) => {
     switch (step) {
       case 1:
-        return <AddAProduct onSubmit={onSubmit}></AddAProduct>;
+        return (
+          <AddAProduct
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            onSubmit={onSubmit}
+          ></AddAProduct>
+        );
       case 2:
-        return <ProductSpec onSubmit={onSubmit}></ProductSpec>;
+        return (
+          <ProductSpec
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            onSubmit={onSubmit}
+          ></ProductSpec>
+        );
       case 3:
-        return <Inventory onSubmit={onSubmit}></Inventory>;
+        return (
+          <Inventory
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            onSubmit={onSubmit}
+          ></Inventory>
+        );
       case 4:
-        return <Strains onSubmit={onSubmit}></Strains>;
+        return (
+          <Strains
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            onSubmit={onSubmit}
+          ></Strains>
+        );
       case 5:
-        return <ProductDescriptions onSubmit={onSubmit}></ProductDescriptions>;
+        return (
+          <ProductDescriptions
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            onSubmit={onSubmit}
+          ></ProductDescriptions>
+        );
       case 6:
-        return <VolumeDiscounts onSubmit={onSubmit}></VolumeDiscounts>;
+        return (
+          <VolumeDiscounts
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            onSubmit={onSubmit}
+          ></VolumeDiscounts>
+        );
       case 7:
-        return <ProductImage onSubmit={onSubmit}></ProductImage>;
+        return (
+          <ProductImage
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            onSubmit={onSubmit}
+          ></ProductImage>
+        );
       default:
     }
   };
