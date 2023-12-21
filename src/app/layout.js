@@ -3,7 +3,7 @@ import "./globals.css";
 
 // const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",

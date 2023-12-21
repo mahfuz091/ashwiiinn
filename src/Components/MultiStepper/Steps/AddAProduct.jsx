@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 const AddAProduct = ({ onSubmit }) => {
   const { register, handleSubmit, getValues, onChange } = useForm();
   return (
-    <div>
+    <div className="mb-[65px]">
       <div className='addproduct-header  flex justify-between items-center'>
         <h4 className='text-[#000] text-[30px] font-semibold'>Add A Product</h4>
         <select
