@@ -39,11 +39,12 @@ const ProductImage = () => {
     }
   };
   return (
-    <div className="mb-[65px]">
-      ProductImage
+    <div className='mb-[65px]'>
+      <h4 className='text-[#000] text-[22px] md:text-[30px] font-semibold'>
+        Product Image
+      </h4>
       <form action='' className='form-container'>
         <div>
-
           <div
             style={{
               border: "1px dashed #9B9B9B",
@@ -87,7 +88,7 @@ const ProductImage = () => {
             </label>
           </div>
 
-          <div className='md:grid grid-cols-4 gap-[38px] mt-[40px]'>
+          <div className='md:grid grid-cols-2 xl:grid-cols-4 gap-[38px] mt-[40px]'>
             <div className='border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
               {/* {selectedImages.length > 0 && (
               <div>
@@ -109,60 +110,59 @@ const ProductImage = () => {
             )} */}
               {selectedImages.length > 0 && (
                 <img
-                  className="w-[260px] h-[155px]"
+                  className='w-[260px] h-[155px]'
                   src={URL.createObjectURL(selectedImages[0])}
                   alt='l'
-
                 />
               )}
             </div>
-            <div className='border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
-
+            <div className='mt-4 md:mt-0 border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
               {selectedImages.length > 1 && (
                 <img
-                  className="w-[260px] h-[155px]"
+                  className='w-[260px] h-[155px]'
                   src={URL.createObjectURL(selectedImages[1])}
                   alt='l'
-
                 />
               )}
             </div>
-            <div className='border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
-
+            <div className='mt-4 md:mt-0 border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
               {selectedImages.length > 2 && (
                 <img
-                  className="w-[260px] h-[155px]"
+                  className='w-[260px] h-[155px]'
                   src={URL.createObjectURL(selectedImages[2])}
                   alt='l'
-
                 />
               )}
             </div>
-            <div className='border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
-
+            <div className='mt-4 md:mt-0 border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
               {selectedImages.length > 3 && (
                 <img
-                  className="w-[260px] h-[155px]"
+                  className='w-[260px] h-[155px]'
                   src={URL.createObjectURL(selectedImages[3])}
                   alt='l'
-
                 />
               )}
             </div>
-
-
           </div>
-          <ul className="marker:text-[#6BCB77] mt-[40px] list-disc pl-[25px] ">
-            <li className="text-[#000] text-[20px] font-medium">700 x 384 minimum dimensions</li>
-            <li className="text-[#000] text-[20px] font-medium">10mb Maximum file size</li>
-            <li className="text-[#000] text-[20px] font-medium">Avoid using logos for product images</li>
-            <li className="text-[#000] text-[20px] font-medium">Rearrange images by dragging photo</li>
+          <ul className='marker:text-[#6BCB77] mt-[40px] list-disc pl-[25px] '>
+            <li className='text-[#000] text-[20px] font-medium'>
+              700 x 384 minimum dimensions
+            </li>
+            <li className='text-[#000] text-[20px] font-medium'>
+              10mb Maximum file size
+            </li>
+            <li className='text-[#000] text-[20px] font-medium'>
+              Avoid using logos for product images
+            </li>
+            <li className='text-[#000] text-[20px] font-medium'>
+              Rearrange images by dragging photo
+            </li>
           </ul>
         </div>
 
-        <div className="btn-group flex gap-6 mt-[40px]">
-          <input type="submit" value="Save" className="thm-btn" />
-          <button className="btn-secondary">Cancel</button>
+        <div className='btn-group flex gap-6 mt-[40px]'>
+          <input type='submit' value='Save' className='thm-btn' />
+          <button className='btn-secondary'>Cancel</button>
         </div>
       </form>
     </div>

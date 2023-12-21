@@ -10,7 +10,7 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
   };
   return (
     <div className='mb-[65px]'>
-      <h4 className='text-[#000] text-[30px] font-semibold'>
+      <h4 className='text-[#000] text-[22px] md:text-[30px] font-semibold'>
         Volume Discounts
       </h4>
       <form action='' onSubmit={handleSubmit(onSubmit)}>
@@ -23,11 +23,11 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
               </select>
             </div>
           </div>
-          <div className='flex justify-between items-center gap-[15px] mt-[35px]'>
+          <div className='md:flex justify-between items-center gap-[15px] mt-[35px]'>
             <span className='text-[#000] text-[15px] font-normal mt-[25px]'>
               If a customer buys
             </span>
-            <div className='form-control w-[302px] '>
+            <div className='form-control md:w-[302px]  '>
               <label htmlFor=''>Product Line</label>
               <input
                 className='w-full input-primary'
@@ -38,7 +38,7 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
             <p className='text-[#000] text-[15px] font-normal mt-[25px]'>
               or more, the customer will get
             </p>
-            <div className='form-control w-[302px] '>
+            <div className='form-control md:w-[302px] '>
               <label htmlFor=''>Product Line</label>
               <input
                 className='w-full input-primary'
@@ -59,7 +59,7 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
           Product Visibility Settings
         </h4>
         <div className='form-container'>
-          <div className='md:flex  gap-[89px]'>
+          <div className='md:flex gap-[89px]'>
             <label className='text-[#000] text-[17px] font-medium'>
               <input
                 type='radio'

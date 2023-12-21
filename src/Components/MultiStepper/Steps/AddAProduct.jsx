@@ -4,11 +4,13 @@ import { useForm } from "react-hook-form";
 const AddAProduct = ({ onSubmit }) => {
   const { register, handleSubmit, getValues, onChange } = useForm();
   return (
-    <div className="mb-[65px]">
+    <div className='mb-[65px]'>
       <div className='addproduct-header  flex justify-between items-center'>
-        <h4 className='text-[#000] text-[30px] font-semibold'>Add A Product</h4>
+        <h4 className='text-[#000] text-[15px] md:text-[30px] font-semibold'>
+          Add A Product
+        </h4>
         <select
-          className='py-[17px] pl-[33px] pr-[64px] bg-[#6BCB77] rounded-[30px] text-[#fff] text-[17px] font-semibold'
+          className='py-[17px] pl-[20px] pr-[40px] md:pl-[33px] md:pr-[64px] bg-[#6BCB77] rounded-[30px] text-[#fff] text-[13px] md:text-[17px] font-semibold'
           name=''
           id=''
         >
@@ -21,10 +23,10 @@ const AddAProduct = ({ onSubmit }) => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className='flex justify-between items-center mb-[40px]'>
-          <h5 className='text-[17px] text-[#000] font-medium'>
+          <h5 className='text-[13px] md:text-[17px] text-[#000] font-medium'>
             Add / Edit a Product
           </h5>
-          <p className='text-[13px] text-[#535353] font-normal'>
+          <p className='text-[11px] md:text-[13px] text-[#535353] font-normal'>
             fill out the following and click save at the bottom
           </p>
         </div>

@@ -65,7 +65,9 @@ const ProductDescriptions = ({ onSubmit, currentStep, setCurrentStep }) => {
   };
   return (
     <div className='mb-[63px]'>
-      <h4 className='text-[#000] text-[30px] font-semibold'>Product Details</h4>
+      <h4 className='text-[#000] text-[22px] md:text-[30px] font-semibold'>
+        Product Details
+      </h4>
       <form action='' onSubmit={handleSubmit(onSubmit)}>
         <div>
           <div className='w-full' style={{ display: "grid" }}>

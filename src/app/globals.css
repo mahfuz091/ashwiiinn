@@ -10,6 +10,12 @@
   background-position: right 33px center;
 }
 
+@media (max-width: 575px) {
+  .addproduct-header select {
+    background-position: right 20px center;
+  }
+}
+
 .form-container {
   border-radius: 15px;
   background: #fff;

@@ -63,16 +63,20 @@ const Stepper = ({ currentStep, steps, setCurrentStep }) => {
       >
         <div className='relative flex flex-col items-center '>
           <div
-            className={`absolute -top-[100px] text-center mt-16 w-8 mx-2 md:w-32 lg:w-64 text-[8px] md:text-[15px] ${step.heighlighted
-              ? "text-[#000] font-medium lg:font-semibold"
-              : step.completed ? "text-[#000] font-medium lg:font-semibold" : "text-[#535353] font-normal"
-              }`}
+            className={`absolute -top-[100px] text-center mt-16 w-8 mx-2 md:w-32 lg:w-64 text-[9px] sm:text-[12px] md:text-[15px] ${
+              step.heighlighted
+                ? "text-[#000] font-medium lg:font-semibold"
+                : step.completed
+                ? "text-[#000] font-medium lg:font-semibold"
+                : "text-[#535353] font-normal"
+            }`}
           >
             {step.description}
           </div>
           <div
-            className={`rounded-full  transition duration-500 ease-in-out flex items-center justify-center py-3 ${step.selected ? " text-white font-bold  " : ""
-              }`}
+            className={`rounded-full  transition duration-500 ease-in-out flex items-center justify-center py-3 ${
+              step.selected ? " text-white font-bold  " : ""
+            }`}
             onClick={() => setCurrentStep(index + 1)}
           >
             {step.completed ? (
@@ -117,14 +121,15 @@ const Stepper = ({ currentStep, steps, setCurrentStep }) => {
           </div>
         </div>
         <div
-          className={`flex-auto border-t-2 transition duration-500 ease-in-out ${step.completed ? "border-[#6BCB77]" : "border-[#878787]"
-            }`}
+          className={`flex-auto border-t-2 transition duration-500 ease-in-out ${
+            step.completed ? "border-[#6BCB77]" : "border-[#878787]"
+          }`}
         ></div>
       </div>
     );
   });
   return (
-    <div className='flex items-center justify-between  px-[69px] pt-[20px] pb-[35px] mb-16 mt-[54px] bg-[#F5F5F5] rounded-[15px]'>
+    <div className='flex items-center justify-between px-6  md:px-[69px] pt-[20px] pb-[35px] mb-16 mt-[54px] bg-[#F5F5F5] rounded-[15px]'>
       {displaySteps}
     </div>
   );

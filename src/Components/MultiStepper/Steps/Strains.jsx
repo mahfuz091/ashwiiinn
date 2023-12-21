@@ -5,7 +5,9 @@ const Strains = ({ onSubmit, currentStep, setCurrentStep }) => {
   const { register, handleSubmit } = useForm();
   return (
     <div className='mb-[65px]'>
-      <h4 className='text-[#000] text-[30px] font-semibold'>Strains</h4>
+      <h4 className='text-[#000] text-[22px] md:text-[30px] font-semibold'>
+        Strains
+      </h4>
       <form
         action=''
         className='form-container'
