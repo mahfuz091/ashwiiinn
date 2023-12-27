@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import 'tailwindcss/tailwind.css';
 
 // const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({

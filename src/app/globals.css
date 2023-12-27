@@ -182,3 +182,14 @@
     margin: 5px;
   }
 }
+
+
+
+/* Banner */
+
+.banner-header {
+  background-image: url(/moon-dust-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
