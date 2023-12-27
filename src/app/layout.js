@@ -1,6 +1,8 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import 'tailwindcss/tailwind.css';
+import "tailwindcss/tailwind.css";
+
+import ReduxProvider from "@/Redux/provider/ReduxProvider";
 
 // const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({
@@ -17,17 +19,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
-      <head>
-        {/* <link rel="shortcut icon" href={favicon} /> */}
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href='/favicon/favicon-32x32.png'
-        />
-      </head>
-      <body className={poppins.className}>{children}</body>
-    </html>
+    <ReduxProvider>
+      <html lang='en'>
+        <head>
+          {/* <link rel="shortcut icon" href={favicon} /> */}
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='32x32'
+            href='/favicon/favicon-32x32.png'
+          />
+        </head>
+        <body className={poppins.className}>{children}</body>
+      </html>
+    </ReduxProvider>
   );
 }
