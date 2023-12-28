@@ -13,7 +13,7 @@ const ShopProductsPage = () => {
             Search Your Proudcts
           </h4>
           <form action=''>
-            <div className='lg:px-[214px] flex gap-[30px] items-center'>
+            <div className='md:px-[100px] xl:px-[214px] flex gap-[30px] items-center'>
               <div className='form-control relative w-full '>
                 <input
                   className='pl-[52px] py-[26px] w-full  rounded-[15px] bg-[#F6F6F6] border-[1px] border-[#D1D1D1] '

@@ -11,7 +11,7 @@ const Products = () => {
       .then((data) => SetProducts(data));
   }, []);
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-[31px] gap-y-[48px]'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-[31px] gap-y-[48px]'>
       {products.map((product, index) => (
         <SingleProductCard key={index} product={product}></SingleProductCard>
       ))}
