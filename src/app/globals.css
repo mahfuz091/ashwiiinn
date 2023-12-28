@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .collapse-content {
   overflow: hidden;
 
@@ -195,8 +201,6 @@
   }
 }
 
-
-
 /* Banner */
 
 .banner-header {
@@ -204,4 +208,17 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* Product */
+
+.product-card_footer {
+  background-image: url(/light-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
+}
+.product-card:hover .product-card_footer {
+  background-image: url(/dark-bg.png);
 }
