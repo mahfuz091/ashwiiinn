@@ -16,20 +16,20 @@ const MoonDustPage = () => {
         <div>
             <Header title={"Moon Dust"}></Header>
             <section className='banner container mx-auto '>
-                <div className='banner-header mt-[95px] rounded-[25px] mb-[70px]'>
-                    <h4 className='text-white text-5xl font-semibold py-[178px] pl-[98px] '>
+                <div className='banner-header mt-10 md:mt-[95px] rounded-[25px] mb-[50px] md:mb-[70px]'>
+                    <h4 className='text-white text-[30px] md:text-[50px] font-semibold py-[80px] lg:py-[178px] pl-[40px] md:pl-[98px] '>
                         MOON DUST
                     </h4>
                 </div>
-                <div className='moondust-desc px-[180px] mb-[116px]'>
+                <div className='moondust-desc px-6 md:px-[70px] lg:px-[120px] xl:px-[180px] mb-16 md:mb-[116px]'>
                     <div className='flex justify-between items-center '>
-                        <h3 className='uppercase text-[40px] font-semibold '>Moon Dust</h3>
+                        <h3 className='uppercase text-[25px] md:text-[40px] font-semibold '>Moon Dust</h3>
                         <div>
                             <div className='flex items-center gap-[11px]'>
                                 <div className='text-white text-[13px] bg-[#442862] px-[12.72px] py-[3.64px] rounded-[12px]'>
                                     Med
                                 </div>
-                                <p className='text-[17px] text-[#448E4D] font-normal'>
+                                <p className='text-[14px] md:text-[17px] text-[#448E4D] font-normal'>
                                     PAAA-LB8B-DFCC
                                 </p>
                             </div>
@@ -48,7 +48,7 @@ const MoonDustPage = () => {
                         urna. Quisque dapibus ex tempus mi feugiat, ut posuere eros mollis.
                         Morbi ut congue nulla.
                     </p>
-                    <div className='flex justify-between'>
+                    <div className='flex flex-col lg:flex-row gap-4  justify-between'>
                         <a
                             href='ilovemoondust.com'
                             className='flex items-center gap-[12px]'

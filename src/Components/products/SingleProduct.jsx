@@ -5,8 +5,8 @@ const SingleProduct = ({ product }) => {
 
     console.log(product);
     return (
-        <div className='py-[37px] border-b-[1px] border-b-[#DBDBDB] last:border-none flex justify-between items-center'>
-            <div className='flex items-center gap-[26px]'>
+        <div className='py-[37px] border-b-[1px] border-b-[#DBDBDB] last:border-none flex flex-col sm:flex-row justify-between sm:items-center gap-4'>
+            <div className='flex flex-col md:flex-row md:items-center gap-[26px]'>
                 <img className='rounded-[10px] w-[189px] h-[189px]' src={product.image} alt="" />
                 <div className='max-w-[373px]'>
                     <h4 className="text-[24px] text-[#442862] font-medium mb-[17px]">{product.title}</h4>
@@ -17,7 +17,7 @@ const SingleProduct = ({ product }) => {
                 </div>
             </div>
             <div>
-                <div className='flex w-[201px] items-center gap-[37px] p-2 border-[2px] border-[#6BCB77] rounded-[42px]'>
+                <div className='flex  w-[201px] items-center gap-[37px] p-2 border-[2px] border-[#6BCB77] rounded-[42px]'>
                     <button className='flex justify-center items-center w-[41px] h-[41px] bg-[#6BCB77] rounded-full'><svg xmlns="http://www.w3.org/2000/svg" width="15" height="3" viewBox="0 0 15 3" fill="none">
                         <path d="M1.79514 1.34497H12.8401" stroke="white" stroke-width="2.5" stroke-linecap="round" />
                     </svg></button>

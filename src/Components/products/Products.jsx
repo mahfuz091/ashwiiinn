@@ -23,7 +23,7 @@ const Products = () => {
   }, [isOpen]);
   return <div className="container mx-auto mb-[94px]">
     <div className='Distillate-Cartridges px-[33px] py-[36px] bg-[#F5F5F5] rounded-[15px]'>
-      <div className='flex justify-between items-center'>
+      <div className='flex flex-col sm:flex-row justify-between sm:items-center gap-5'>
         <h6 className="text-[#000] text-[20px] font-medium">Moon Dust - 1G Distillate Cartridges</h6>
         <div className='flex justify-between items-center gap-[12px]'>
           <p className="text-[#535353] text-[15px] font-normal">Showing 1 - {products.length} of {products.length} results</p>
