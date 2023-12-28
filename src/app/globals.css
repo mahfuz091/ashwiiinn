@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.collapse-content {
+  overflow: hidden;
+
+  /* Set your desired max height */
+  transition: height 0.3s ease-in-out;
+  /* Smooth transition */
+}
+
+.collapsed {
+  height: 0;
+}
+
 .addproduct-header select {
   appearance: none;
   --webkit-appearance: none;
