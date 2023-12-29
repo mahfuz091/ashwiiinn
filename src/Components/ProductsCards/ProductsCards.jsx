@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import SingleProductCard from "../Products/SingleProductCard";
+import SingleProductCard from "./SingleProductCard";
 
 const ProductsCards = () => {
   const [productsData, SetProductsData] = useState([]);
