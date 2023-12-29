@@ -219,6 +219,24 @@
   background-repeat: no-repeat;
   transition: all 0.3s ease-in-out;
 }
+
 .product-card:hover .product-card_footer {
   background-image: url(/dark-bg.png);
+}
+
+
+/* details View */
+.details-banner {
+  background-image: url(/details-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+@media (min-width: 1680px) {
+  .details-banner .container {
+    padding-top: 250px;
+    padding-bottom: 250px;
+  }
 }
