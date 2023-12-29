@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/Components/Header/Header";
-import Products from "@/Components/Products/Products";
-// import Products from "@/Components/Products/Products";
+import ProductsCards from "@/Components/ProductsCards/ProductsCards";
 
 const ShopProductsPage = () => {
   return (
@@ -60,7 +59,8 @@ const ShopProductsPage = () => {
         <h4 className='text-[35px] text-[#000] font-semibold text-center mt-[81px] mb-[36px]'>
           Shop Proudcts
         </h4>
-        <Products></Products>
+        {/* <Products></Products> */}
+        <ProductsCards></ProductsCards>
       </section>
     </div>
   );
