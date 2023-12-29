@@ -59,7 +59,7 @@ const ShopProductsPage = () => {
         <h4 className='text-[35px] text-[#000] font-semibold text-center mt-[81px] mb-[36px]'>
           Shop Proudcts
         </h4>
-        {/* <Products></Products> */}
+
         <ProductsCards></ProductsCards>
       </section>
     </div>

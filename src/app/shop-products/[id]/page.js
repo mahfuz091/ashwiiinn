@@ -73,7 +73,7 @@ const SingleProductPage = ({ params }) => {
               </button>
             </div>
           </div>
-          <div className='flex justify-center items-center gap-[23px] mt-[29px]'>
+          <div className='flex justify-center items-center gap-[23px] mt-[29px] mb-[180px]'>
             <div>
               <img src='/Mask group (2).png' alt='' />
             </div>
@@ -88,6 +88,59 @@ const SingleProductPage = ({ params }) => {
             </div>
             <div>
               <img src='/Mask group (2).png' alt='' />
+            </div>
+          </div>
+          <div className='flex justify-between'>
+            <div>
+              <p className='text-[#535353] text-[24px] font-medium mb-3'>
+                Sold by{" "}
+                <span className='text-[#000] text-[24px] font-semibold'>
+                  Bogart St. Cannabis C.
+                </span>
+              </p>
+              <p className='text-[#535353] text-[20px] font-normal'>
+                300 Main, LLC, PAAA-JNBG-ISYD OK
+              </p>
+            </div>
+            <div className='flex gap-[125px]'>
+              <div>
+                <h6 className='text-[#6BCB77] w-[159px] text-[24px] font-semibold mb-[48px] border-b-[1px] border-b-[#6BCB77]'>
+                  Product Info
+                </h6>
+                <ul>
+                  <li className='text-[#000] text-[20px] font-normal mb-[22px]'>
+                    Classification
+                  </li>
+                  <li className='text-[#000] text-[20px] font-normal mb-[22px]'>
+                    Category
+                  </li>
+                  <li className='text-[#000] text-[20px] font-normal mb-[22px]'>
+                    Strain Classification
+                  </li>
+                  <li className='text-[#000] text-[20px] font-normal mb-[22px]'>
+                    Strains
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h6 className='text-[#6BCB77] w-[252px] text-[24px] font-semibold mb-[48px] border-b-[1px] border-b-[#6BCB77]'>
+                  Product Description
+                </h6>
+                <ul>
+                  <li className='text-[#000] text-[20px] font-medium mb-[22px]'>
+                    Medical
+                  </li>
+                  <li className='text-[#000] text-[20px] font-medium mb-[22px]'>
+                    Cartridges
+                  </li>
+                  <li className='text-[#000] text-[20px] font-medium mb-[22px]'>
+                    Indica
+                  </li>
+                  <li className='text-[#000] text-[20px] font-medium mb-[22px]'>
+                    Watermelon OG
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
