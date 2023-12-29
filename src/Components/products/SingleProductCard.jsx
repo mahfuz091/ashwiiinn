@@ -2,8 +2,7 @@
 import Link from "next/link";
 import React from "react";
 
-const SingleProductCard = ({ product }) => {
-  console.log(product);
+const SingleProductCard = ({ singleProduct }) => {
   return (
     <div className='product-card cursor-pointer rounded-[20px] bg-[#fff] shadow-primary text-center'>
       <div className='px-[17px] pt-[34px] '>
@@ -14,18 +13,18 @@ const SingleProductCard = ({ product }) => {
           Robot Pharmer
         </a>
         <h4 className='text-[#000] text-[20px] font-medium mt-[12px] mb-[25px]'>
-          {product.title}
+          {singleProduct.title}
         </h4>
-        <img className='mx-auto mb-[25px]' src={product.image} alt='' />
+        <img className='mx-auto mb-[25px]' src={singleProduct.image} alt='' />
       </div>
-      <Link href={`/shop-products/${product.id}`}>
+      <Link href={`/shop-products/${singleProduct.id}`}>
         <div className='product-card_footer flex justify-between  px-[17px] py-[18px] rounded-b-[20px]'>
           <div className='flex flex-col items-start'>
             <h4 className='text-[#fff] text-[24px] font-semibold mb-[5px]'>
               Add To Cart
             </h4>
             <p className='text-[#fff] text-[17px] font-medium'>
-              ${product.price}/unit
+              ${singleProduct.price}/unit
             </p>
           </div>
           <div>
@@ -51,7 +50,8 @@ const SingleProductCard = ({ product }) => {
               />
             </svg>
           </div>
-        </div></Link>
+        </div>
+      </Link>
     </div>
   );
 };
