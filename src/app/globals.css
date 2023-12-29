@@ -251,9 +251,9 @@
   padding: 7px;
 }
 
-@media (min-width: 1680px) {
+/* @media (min-width: 1680px) {
   .details-banner .container {
-    padding-top: 250px;
-    padding-bottom: 250px;
+    padding-top: 88px;
+    padding-bottom: 71px;
   }
-}
+} */

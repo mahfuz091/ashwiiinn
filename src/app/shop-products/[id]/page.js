@@ -9,7 +9,7 @@ const SingleProductPage = ({ params }) => {
     <div>
       <Header title={"Details View"}></Header>
       <section className='details-banner'>
-        <div className='container mx-auto pt-[88px]  pb-[71px]'>
+        <div className='container mx-auto pt-[88px] pb-[71px]'>
           <div className='flex justify-between'>
             <div className='flex items-center'>
               <div className='max-w-[600px] w-full'>
