@@ -6,12 +6,11 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
 
-  // content: [
-  //   "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-  //   "./src/Components/**/*.{js,ts,jsx,tsx,mdx}",
-  //   "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-
-  // ],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/Components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       backgroundImage: {
@@ -21,7 +20,7 @@ module.exports = {
       },
       boxShadow: {
         primary: "0px 12px 43px 0px rgba(0, 0, 0, 0.11)",
-        secoundary: " 0px 20px 55px 0px rgba(0, 0, 0, 0.18)"
+        secoundary: " 0px 20px 55px 0px rgba(0, 0, 0, 0.18)",
       },
     },
     container: {

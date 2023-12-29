@@ -2,8 +2,6 @@
 import Header from "@/Components/Header/Header";
 import Products from "@/Components/Products/Products";
 
-import React from "react";
-
 const ShopProductsPage = () => {
   return (
     <div>
