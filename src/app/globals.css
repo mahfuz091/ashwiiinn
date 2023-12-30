@@ -258,6 +258,9 @@
   }
 } */
 .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
-  margin: -100px;
-  padding: 100px;
+  margin-top: -80px;
+  padding-top: 80px;
+  margin-bottom: -80px;
+  padding-bottom: 80px;
+
 }

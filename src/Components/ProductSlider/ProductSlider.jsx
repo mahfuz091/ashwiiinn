@@ -1,12 +1,17 @@
 "use client"
 import React, { useEffect, useState } from 'react';
+
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/navigation';
 import SingleProductCard from '../ProductsCards/SingleProductCard';
+
 const ProductSlider = () => {
     const [productsData, SetProductsData] = useState([]);
+
 
     useEffect(() => {
         fetch("/products.json")
@@ -24,11 +29,20 @@ const ProductSlider = () => {
     }
 
     return (
-        <div>
+        <div >
             <Swiper
+
                 spaceBetween={30}
                 slidesPerView={4}
+                navigation={{
+                    nextEl: '.next', // CSS class for your custom 'Next' button
+                    prevEl: '.prev', // CSS class for your custom 'Previous' button
+                }}
+
             >
+
+                <SwiperSlide ><SingleProductCard singleProduct={product} ></SingleProductCard></SwiperSlide>
+                <SwiperSlide><SingleProductCard singleProduct={product} ></SingleProductCard></SwiperSlide>
                 <SwiperSlide><SingleProductCard singleProduct={product} ></SingleProductCard></SwiperSlide>
                 <SwiperSlide><SingleProductCard singleProduct={product} ></SingleProductCard></SwiperSlide>
                 <SwiperSlide><SingleProductCard singleProduct={product} ></SingleProductCard></SwiperSlide>
