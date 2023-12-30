@@ -10,13 +10,13 @@ const SingleProductPage = ({ params }) => {
       <Header title={"Details View"}></Header>
       <section className='details-banner'>
         <div className='container mx-auto pt-[88px] pb-[71px]'>
-          <div className='flex justify-between'>
-            <div className='flex items-center'>
-              <div className='max-w-[600px] w-full'>
-                <h4 className='text-[#000] text-[50px] font-bold text-center'>
+          <div className='md:flex justify-between'>
+            <div className='md:flex items-center'>
+              <div className='max-w-[380px] xl:max-w-[600px] w-full'>
+                <h4 className='text-[#000] text-[30px] xl:text-[50px] font-bold text-center'>
                   Goodfellas Disposable Watermelon OG -1G
                 </h4>
-                <p className='text-[#000] text-[24px] font-normal text-center'>
+                <p className='text-[#000] text-[20px] xl:text-[24px] font-normal text-center'>
                   Our organic Dragon fruit powder is perfect for making
                   smothies, smoothie bowls, agua fresca’s chia pudding and much
                   more.
@@ -29,7 +29,7 @@ const SingleProductPage = ({ params }) => {
                 Freeze Dried Powder
               </p>
               <select
-                className='details-select py-[25px] pl-[26px] pr-[142px] bg-[#FFB800] rounded-[40px] text-[#000] text-[20px] font-semibold focus:border-none mb-[25px]'
+                className='details-select w-full py-[25px] pl-[26px] pr-[75px] md:pr-[142px] bg-[#FFB800] rounded-[40px] text-[#000] text-[20px] font-semibold focus:border-none mb-[25px]'
                 name=''
                 id=''
               >
@@ -93,7 +93,7 @@ const SingleProductPage = ({ params }) => {
         </div>
       </section>
       <section className='container mx-auto mt-[107px]'>
-        <div className='flex justify-between'>
+        <div className='xl:flex justify-between'>
           <div>
             <p className='text-[#535353] text-[24px] font-medium mb-3'>
               Sold by{" "}
@@ -101,11 +101,11 @@ const SingleProductPage = ({ params }) => {
                 Bogart St. Cannabis C.
               </span>
             </p>
-            <p className='text-[#535353] text-[20px] font-normal'>
+            <p className='text-[#535353] text-[20px] font-normal mb-5 xl:mb-0'>
               300 Main, LLC, PAAA-JNBG-ISYD OK
             </p>
           </div>
-          <div className='flex gap-[125px]'>
+          <div className='md:flex gap-[125px]'>
             <div>
               <h6 className='text-[#6BCB77] w-[159px] text-[24px] font-semibold mb-[48px] border-b-[1px] border-b-[#6BCB77]'>
                 Product Info
