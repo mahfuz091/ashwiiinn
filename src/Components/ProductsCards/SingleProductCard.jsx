@@ -3,6 +3,8 @@ import Link from "next/link";
 import React from "react";
 
 const SingleProductCard = ({ singleProduct }) => {
+  console.log(singleProduct);
+  console.log("render");
   return (
     <div className='product-card cursor-pointer rounded-[20px] bg-[#fff] shadow-primary text-center'>
       <div className='px-[17px] pt-[34px] '>

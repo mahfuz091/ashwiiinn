@@ -257,3 +257,7 @@
     padding-bottom: 71px;
   }
 } */
+.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+  margin: -100px;
+  padding: 100px;
+}

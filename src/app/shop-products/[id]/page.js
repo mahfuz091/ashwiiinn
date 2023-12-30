@@ -1,10 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/Components/Header/Header";
+import ProductSlider from "@/Components/ProductSlider/ProductSlider";
 import React from "react";
+
 
 const SingleProductPage = ({ params }) => {
   const { title } = params;
-  console.log(params);
+
+
   return (
     <div>
       <Header title={"Details View"}></Header>
@@ -147,7 +150,12 @@ const SingleProductPage = ({ params }) => {
           </div>
         </div>
       </section>
-    </div>
+      <section className='container mx-auto py-[100px] bg-[#fff]'>
+        <h4 className='text-[#000] text-[30px] xl:text-[50px] font-bold mb-[35px]'>You May Also Like</h4>
+
+        <ProductSlider ></ProductSlider>
+      </section>
+    </div >
   );
 };
 
