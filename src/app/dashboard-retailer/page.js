@@ -7,12 +7,14 @@ const DashboardRetailerPage = () => {
     <div className='mb-[76px]'>
       <Header title={"DashBoard Retailer"}></Header>
       <section className='container mx-auto mt-[72px]'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-[45px]'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-[45px]'>
           <div className='pt-[30px] pr-[40px] pb-[49px] pl-[29px] shadow-third bg-[#fff] rounded-[20px]'>
             <h5 className='text-[#000] text-[17px] font-medium'>Open Orders</h5>
             <div className='flex justify-between items-center text-center'>
               <div>
-                <p className='text-[#000] text-[70px] font-medium '>0</p>
+                <p className='text-[#000] text-[50px] md:text-[70px] font-medium '>
+                  0
+                </p>
                 <p className='flex items-center gap-[5px]'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -28,13 +30,15 @@ const DashboardRetailerPage = () => {
                       fill='#535353'
                     />
                   </svg>
-                  <span className='text-[#535353] text-[15px] font-normal'>
+                  <span className='text-[#535353] text-[12px] sm:text-[15px] font-normal'>
                     Submitted
                   </span>
                 </p>
               </div>
               <div>
-                <p className='text-[#000] text-[70px] font-medium '>0</p>
+                <p className='text-[#000] text-[50px] md:text-[70px] font-medium '>
+                  0
+                </p>
                 <p className='flex items-center gap-[5px]'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -50,13 +54,15 @@ const DashboardRetailerPage = () => {
                       fill='#6BCB77'
                     />
                   </svg>
-                  <span className='text-[#535353] text-[15px] font-normal'>
+                  <span className='text-[#535353] text-[12px] sm:text-[15px] font-normal'>
                     Accepted
                   </span>
                 </p>
               </div>
               <div>
-                <p className='text-[#000] text-[70px] font-medium '>9</p>
+                <p className='text-[#000] text-[50px] md:text-[70px] font-medium '>
+                  9
+                </p>
                 <p className='flex items-center gap-[5px]'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -72,11 +78,15 @@ const DashboardRetailerPage = () => {
                       fill='#2C4AE9'
                     />
                   </svg>
-                  <span>Fulfilled</span>
+                  <span className='text-[#535353] text-[12px] sm:text-[15px] font-normal'>
+                    Fulfilled
+                  </span>
                 </p>
               </div>
               <div>
-                <p className='text-[#000] text-[70px] font-medium '>5</p>
+                <p className='text-[#000] text-[50px] md:text-[70px] font-medium '>
+                  5
+                </p>
                 <p className='flex items-center gap-[5px]'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -92,7 +102,7 @@ const DashboardRetailerPage = () => {
                       fill='#CC02FF'
                     />
                   </svg>{" "}
-                  <span className='text-[#535353] text-[15px] font-normal'>
+                  <span className='text-[#535353] text-[12px] sm:text-[15px] font-normal'>
                     Shipped
                   </span>
                 </p>
@@ -183,7 +193,7 @@ const DashboardRetailerPage = () => {
             <p className='text-[#000] text-[17px] font-medium mb-[36px]'>
               Total Sales in the Last 7 Days
             </p>
-            <h4 className='text-[#000] text-[70px] font-medium mb-[64px]'>
+            <h4 className='text-[#000] text-[50px] md:text-[70px] font-medium mb-[64px]'>
               $5,047.01
             </h4>
             <a className='text-[#442862] text-[15px] font-medium' href='#'>
@@ -191,7 +201,7 @@ const DashboardRetailerPage = () => {
             </a>
           </div>
         </div>
-        <div className='pt-[26px] pr-[35px] pb-[31px] pl-[29px] shadow-third bg-[#fff] rounded-[20px]'>
+        <div className='pt-[26px] pr-[35px] pb-[31px] pl-[29px] shadow-third bg-[#fff] rounded-[20px] mt-[36px]'>
           <h5 className='text-[#000] text-[17px] font-medium mb-[6px]'>
             Recent Orders
           </h5>

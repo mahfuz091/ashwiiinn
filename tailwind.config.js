@@ -22,6 +22,7 @@ module.exports = {
         primary: "0px 12px 43px 0px rgba(0, 0, 0, 0.11)",
         secoundary: " 0px 20px 55px 0px rgba(0, 0, 0, 0.18)",
         third: "0px 4px 40px 0px rgba(0, 0, 0, 0.08)",
+        fourth: "0px 0px 34px 0px rgba(0, 0, 0, 0.06)",
       },
     },
     container: {
