@@ -126,7 +126,7 @@ const WishListPage = () => {
                 <tr>
                   <th style={{ width: "510px", minWidth: "510px" }}>Product</th>
                   <th>Price</th>
-                  <th>Last Ordered</th>
+                  <th style={{ minWidth: "200px" }}>Last Ordered</th>
                   <th>Quantity</th>
                   <th>Actions</th>
                 </tr>
