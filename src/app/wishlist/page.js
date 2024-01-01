@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Header from "@/Components/Header/Header";
 import React from "react";
 
@@ -18,7 +19,7 @@ const WishListPage = () => {
         <a className='text-[#535353] text-[17px] font-medium mr-[39px]' href=''>
           Purchase History
         </a>
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-[38px] mt-[24px]'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-[38px] mt-[24px] mb-[40px]'>
           <div className='p-[27px] shadow-fourth bg-[#fff] rounded-[20px]'>
             <form action=''>
               <div className='form-control relative'>
@@ -105,6 +106,172 @@ const WishListPage = () => {
                 />
               </div>
             </form>
+          </div>
+        </div>
+        <div className='flex gap-[7px] mb-[34px]'>
+          <h5 className='text-[#000] text-[17px] font-medium'>
+            Pharmhouse Cannabis Co - 530W. Lindsey St, Norman
+          </h5>
+          <div className='text-white text-[15px] font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
+            Med
+          </div>
+        </div>
+        <p className='text-[#535353] text-[15px] font-normal mb-[15px]'>
+          Showing 1 - 2 of 2 results
+        </p>
+        <div className='py-[25px] px-[31px] shadow-fourth bg-[#fff] rounded-[15px]'>
+          <div className='table-responsive wishlist-table'>
+            <table className='w-full '>
+              <thead>
+                <tr>
+                  <th style={{ width: "510px", minWidth: "510px" }}>Product</th>
+                  <th>Price</th>
+                  <th>Last Ordered</th>
+                  <th>Quantity</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className=''>
+                    <div className='flex items-center gap-[30px] mr-0 pr-0'>
+                      <img
+                        className='w-[95px] h-[95px] rounded-[10px]'
+                        src='/bottle-hemp-oil-with-coffee-beans-hemp-leaf 1.png'
+                        alt=''
+                      />
+                      <div>
+                        <h5 className='text-[#6BCB77] text-[15px] font-medium mb-[12px]'>
+                          Orion Cannabis
+                        </h5>
+                        <p className='text-[#000] text-[17px] font-medium'>
+                          1,000mg Orion Shooting Star RSO Gummies
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <h6 className='text-[#000] text-[17px] font-medium mb-[11px]'>
+                      $22.50/unit
+                    </h6>
+                    <p className='text-[#535353] text-5px] font-normal line-through'>
+                      $30.00
+                    </p>
+                  </td>
+                  <td>
+                    <p className='text-[#000] text-[17px] font-medium'>----</p>
+                  </td>
+                  <td>
+                    <input
+                      className='py-[11px] pl-[16px] border-[1px] max-w-[111px] border-[#E9E9E9] rounded-[5px]'
+                      type='text'
+                      placeholder='0'
+                    />
+                    <p className='text-[#535353] text-[13px] font-normal mt-[10px]'>
+                      Min : 1 Max : 100
+                    </p>
+                  </td>
+                  <td>
+                    <div className='flex gap-[11px] -mt-[30px] items-start justify-end'>
+                      <img src='/cart-add.png' alt='' />
+                      <img src='/save.png' alt='' />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className=''>
+                    <div className='flex items-center gap-[30px] mr-0 pr-0'>
+                      <img
+                        className='w-[95px] h-[95px] rounded-[10px]'
+                        src='/bottle-hemp-oil-with-coffee-beans-hemp-leaf 1.png'
+                        alt=''
+                      />
+                      <div>
+                        <h5 className='text-[#6BCB77] text-[15px] font-medium mb-[12px]'>
+                          Orion Cannabis
+                        </h5>
+                        <p className='text-[#000] text-[17px] font-medium'>
+                          1,000mg Orion Shooting Star RSO Gummies
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <h6 className='text-[#000] text-[17px] font-medium mb-[11px]'>
+                      $22.50/unit
+                    </h6>
+                    <p className='text-[#535353] text-5px] font-normal line-through'>
+                      $30.00
+                    </p>
+                  </td>
+                  <td>
+                    <p className='text-[#000] text-[17px] font-medium'>----</p>
+                  </td>
+                  <td>
+                    <input
+                      className='py-[11px] pl-[16px] border-[1px] max-w-[111px] border-[#E9E9E9] rounded-[5px]'
+                      type='text'
+                      placeholder='0'
+                    />
+                    <p className='text-[#535353] text-[13px] font-normal mt-[10px]'>
+                      Min : 1 Max : 100
+                    </p>
+                  </td>
+                  <td>
+                    <div className='flex gap-[11px] -mt-[30px]  items-start justify-end'>
+                      <img src='/cart-add.png' alt='' />
+                      <img src='/save.png' alt='' />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className=''>
+                    <div className='flex items-center gap-[30px] mr-0 pr-0'>
+                      <img
+                        className='w-[95px] h-[95px] rounded-[10px]'
+                        src='/bottle-hemp-oil-with-coffee-beans-hemp-leaf 1.png'
+                        alt=''
+                      />
+                      <div>
+                        <h5 className='text-[#6BCB77] text-[15px] font-medium mb-[12px]'>
+                          Orion Cannabis
+                        </h5>
+                        <p className='text-[#000] text-[17px] font-medium'>
+                          1,000mg Orion Shooting Star RSO Gummies
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <h6 className='text-[#000] text-[17px] font-medium mb-[11px]'>
+                      $22.50/unit
+                    </h6>
+                    <p className='text-[#535353] text-5px] font-normal line-through'>
+                      $30.00
+                    </p>
+                  </td>
+                  <td>
+                    <p className='text-[#000] text-[17px] font-medium'>----</p>
+                  </td>
+                  <td>
+                    <input
+                      className='py-[11px] pl-[16px] border-[1px] max-w-[111px] border-[#E9E9E9] rounded-[5px]'
+                      type='text'
+                      placeholder='0'
+                    />
+                    <p className='text-[#535353] text-[13px] font-normal mt-[10px]'>
+                      Min : 1 Max : 100
+                    </p>
+                  </td>
+                  <td>
+                    <div className='flex gap-[11px] -mt-[30px]  items-start justify-end'>
+                      <img src='/cart-add.png' alt='' />
+                      <img src='/save.png' alt='' />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
