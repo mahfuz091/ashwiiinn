@@ -60,7 +60,7 @@ const ProductSlider = () => {
         ))}
       </Swiper>
 
-      <div className='absolute top-[110px] right-0 xl:right-[80px]'>
+      <div className='absolute top-[0px] right-0 xl:right-[80px]'>
         <SlidePrevButton swiperRef={swiperRef}></SlidePrevButton>
         <SlideNextButton swiperRef={swiperRef}></SlideNextButton>
       </div>
