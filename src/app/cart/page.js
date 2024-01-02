@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import Header from "@/Components/Header/Header";
 import React, { useState } from "react";

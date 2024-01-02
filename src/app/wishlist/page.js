@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Header from "@/Components/Header/Header";
 import React from "react";
 
@@ -6,7 +5,7 @@ const WishListPage = () => {
   return (
     <div>
       <Header title={"Wishlist"}></Header>
-      <section className='my-[70px] container mx-auto'>
+      <section className='my-[40px] lg:my-[70px] container mx-auto'>
         <h4 className='text-[#000] text-[30px] font-semibold mb-[9px]'>
           Buy It Again
         </h4>
@@ -22,7 +21,7 @@ const WishListPage = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-[38px] mt-[24px] mb-[40px]'>
           <div className='p-[27px] shadow-fourth bg-[#fff] rounded-[20px]'>
             <form action=''>
-              <div className='form-control relative'>
+              <div className=' relative'>
                 <label
                   className='text-[#000] text-[17px] font-medium'
                   htmlFor=''
@@ -112,7 +111,7 @@ const WishListPage = () => {
           <h5 className='text-[#000] text-[17px] font-medium'>
             Pharmhouse Cannabis Co - 530W. Lindsey St, Norman
           </h5>
-          <div className='text-white text-[15px] font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
+          <div className='text-white text-[15px] font-medium h-min bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
             Med
           </div>
         </div>

@@ -11,11 +11,17 @@
 
 .header-title {
   color: #fff;
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 30px;
   /* 125% */
+}
+
+@media (min-width: 575px) {
+  .header-title {
+    font-size: 18px;
+  }
 }
 
 .home-link {
