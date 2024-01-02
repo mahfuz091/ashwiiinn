@@ -322,3 +322,19 @@ td:first-child {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+/* <div className='grid grid-cols-1 lg:grid-cols-2 gap-[106px]'>
+<div>
+  <div>
+    <label htmlFor=''>Order Notes</label>
+    <input
+      className='w-full h-[58px] border-[1px] border-[#E6E6E6]'
+      type='text'
+    />
+  </div>
+  <div>
+    <label htmlFor=''>Order Notes</label>
+    <input type='text' />
+  </div>
+</div>
+</div> */
