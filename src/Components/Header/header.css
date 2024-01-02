@@ -18,7 +18,7 @@
   /* 125% */
 }
 
-@media (min-width: 575px) {
+@media (min-width: 425px) {
   .header-title {
     font-size: 18px;
   }

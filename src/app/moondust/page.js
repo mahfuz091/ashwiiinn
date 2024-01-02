@@ -15,7 +15,7 @@ const MoonDustPage = () => {
       <Header title={"Moon Dust"}></Header>
       <section className='banner container mx-auto '>
         <div className='banner-header mt-10 md:mt-[95px] rounded-[25px] mb-[50px] md:mb-[70px]'>
-          <h4 className='text-white text-[30px] md:text-[50px] font-semibold py-[80px] lg:py-[178px] pl-[40px] md:pl-[98px] '>
+          <h4 className='text-white text-[30px] md:text-[50px] font-semibold py-[80px] xl:py-[178px] pl-[40px] md:pl-[98px] '>
             MOON DUST
           </h4>
         </div>
@@ -48,34 +48,42 @@ const MoonDustPage = () => {
             urna. Quisque dapibus ex tempus mi feugiat, ut posuere eros mollis.
             Morbi ut congue nulla.
           </p>
-          <div className='flex flex-col lg:flex-row gap-4  justify-between'>
+          <div className='flex flex-col 2xl:flex-row gap-4  justify-between'>
             <a
               href='ilovemoondust.com'
               className='flex items-center gap-[12px]'
             >
               <img src='/icon/Link.png' alt='icon' />
-              ilovemoondust.com
+              <span className='text-[#442862] text-[17px] font-normal'>
+                ilovemoondust.com
+              </span>
             </a>
             <a
               href='ilovemoondust.com'
               className='flex items-center gap-[12px]'
             >
               <img src='/icon/Phone.png' alt='icon' />
-              (015) 857-8926
+              <span className='text-[#442862] text-[17px] font-normal'>
+                (015) 857-8926
+              </span>
             </a>
             <a
               href='ilovemoondust.com'
               className='flex items-center gap-[12px]'
             >
               <img src='/icon/Email.png' alt='icon' />
-              james@hotmail.com
+              <span className='text-[#442862] text-[17px] font-normal'>
+                james@hotmail.com
+              </span>
             </a>
             <a
               href='ilovemoondust.com'
               className='flex items-center gap-[12px]'
             >
               <img src='/icon/Location.png' alt='icon' />
-              112 W Main Street
+              <span className='text-[#442862] text-[17px] font-normal'>
+                112 W Main Street
+              </span>
             </a>
           </div>
         </div>

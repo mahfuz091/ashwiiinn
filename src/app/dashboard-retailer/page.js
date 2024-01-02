@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Header from "@/Components/Header/Header";
 import React from "react";
 
@@ -30,7 +29,7 @@ const DashboardRetailerPage = () => {
                       fill='#535353'
                     />
                   </svg>
-                  <span className='text-[#535353] text-[12px] sm:text-[15px] font-normal'>
+                  <span className='text-[#535353] text-[11px] sm:text-[15px] font-normal'>
                     Submitted
                   </span>
                 </p>
@@ -54,7 +53,7 @@ const DashboardRetailerPage = () => {
                       fill='#6BCB77'
                     />
                   </svg>
-                  <span className='text-[#535353] text-[12px] sm:text-[15px] font-normal'>
+                  <span className='text-[#535353] text-[11px] sm:text-[15px] font-normal'>
                     Accepted
                   </span>
                 </p>
@@ -78,7 +77,7 @@ const DashboardRetailerPage = () => {
                       fill='#2C4AE9'
                     />
                   </svg>
-                  <span className='text-[#535353] text-[12px] sm:text-[15px] font-normal'>
+                  <span className='text-[#535353] text-[11px] sm:text-[15px] font-normal'>
                     Fulfilled
                   </span>
                 </p>
@@ -102,7 +101,7 @@ const DashboardRetailerPage = () => {
                       fill='#CC02FF'
                     />
                   </svg>{" "}
-                  <span className='text-[#535353] text-[12px] sm:text-[15px] font-normal'>
+                  <span className='text-[#535353] text-[11px] sm:text-[15px] font-normal'>
                     Shipped
                   </span>
                 </p>

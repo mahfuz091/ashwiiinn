@@ -1,16 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/Components/Header/Header";
 import ProductSlider from "@/Components/ProductSlider/ProductSlider";
+import SlideNextButton from "@/Components/SlideNextButton/SlideNextButton";
 import React from "react";
 // import { useSwiper } from "swiper/react";
-
 
 const SingleProductPage = ({ params }) => {
   const { title } = params;
 
-
   // const swiper = useSwiper();
-
 
   return (
     <div>
@@ -154,24 +152,42 @@ const SingleProductPage = ({ params }) => {
           </div>
         </div>
       </section>
-      <section className='container mx-auto py-[100px] bg-[#fff]'>
-        <div className='flex justify-between'><h4 className='text-[#000] text-[30px] xl:text-[50px] font-bold mb-[35px]'>You May Also Like</h4>
-          <div>
-            <button className="prev cursor-pointer w-[47px] h-[47px] mr-[24px] bg-[#B7AFC0] hover:bg-[#442862] text-white font-bold py-2 px-4 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none">
-              <path d="M1.27344 7.20357L15.0234 7.20357" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M6.81885 12.7259L1.27302 7.20395L6.81885 1.68103" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg></button>
-            <button className="next cursor-pointer w-[47px] h-[47px]  bg-[#B7AFC0] hover:bg-[#442862] text-white font-bold py-2 px-4 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none">
-              <path d="M15.4795 6.7017L1.72949 6.7017" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M9.93408 1.17933L15.4799 6.70133L9.93408 12.2242" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg></button>
+      <section className='container mx-auto py-[100px] bg-[#fff] relative'>
+        <div className='flex justify-between'>
+          <h4 className='text-[#000] text-[30px] xl:text-[50px] font-bold mb-[35px]'>
+            You May Also Like
+          </h4>
+          {/* <div>
+            <button className='prev cursor-pointer w-[47px] h-[47px] mr-[24px] bg-[#B7AFC0] hover:bg-[#442862] text-white font-bold py-2 px-4 rounded-full'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='17'
+                height='14'
+                viewBox='0 0 17 14'
+                fill='none'
+              >
+                <path
+                  d='M1.27344 7.20357L15.0234 7.20357'
+                  stroke='white'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                />
+                <path
+                  d='M6.81885 12.7259L1.27302 7.20395L6.81885 1.68103'
+                  stroke='white'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                />
+              </svg>
+            </button>
+          </div> */}
+        </div>
 
-          </div></div>
-
-        <ProductSlider ></ProductSlider>
+        <ProductSlider></ProductSlider>
       </section>
-
-    </div >
+    </div>
   );
 };
 
