@@ -58,24 +58,6 @@ const ProductSlider = () => {
             <SingleProductCard singleProduct={product}></SingleProductCard>
           </SwiperSlide>
         ))}
-        {/* <SwiperSlide>
-          <SingleProductCard singleProduct={product}></SingleProductCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SingleProductCard singleProduct={product}></SingleProductCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SingleProductCard singleProduct={product}></SingleProductCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SingleProductCard singleProduct={product}></SingleProductCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SingleProductCard singleProduct={product}></SingleProductCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SingleProductCard singleProduct={product}></SingleProductCard>
-        </SwiperSlide> */}
       </Swiper>
 
       <div className='absolute top-[110px] right-0 xl:right-[80px]'>
