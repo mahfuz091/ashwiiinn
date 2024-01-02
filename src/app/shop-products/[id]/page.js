@@ -8,8 +8,6 @@ import React from "react";
 const SingleProductPage = ({ params }) => {
   const { title } = params;
 
-  // const swiper = useSwiper();
-
   return (
     <div>
       <Header title={"Details View"}></Header>
@@ -154,7 +152,7 @@ const SingleProductPage = ({ params }) => {
       </section>
       <section className='container mx-auto py-[100px] bg-[#fff] relative'>
         <div className='flex justify-between'>
-          <h4 className='text-[#000] text-[30px] xl:text-[50px] font-bold mb-[35px]'>
+          <h4 className='text-[#000] text-[30px] xl:text-[50px] font-bold mb-[35px] max-[425px]:max-w-[250px]'>
             You May Also Like
           </h4>
           {/* <div>

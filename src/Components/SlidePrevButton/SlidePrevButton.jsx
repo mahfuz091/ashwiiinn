@@ -1,14 +1,11 @@
 "use client";
 import { React } from "react";
-import { useSwiper } from "swiper/react";
 
-const SlidePrevButton = () => {
-  const swiper = useSwiper();
-
+const SlidePrevButton = ({ swiperRef }) => {
   return (
     <button
-      className='absolute top-0 right-14 cursor-pointer w-[47px] h-[47px] mr-[24px] bg-[#B7AFC0] hover:bg-[#442862] text-white font-bold py-2 px-4 rounded-full'
-      onClick={() => swiper.slidePrev()}
+      className=' cursor-pointer w-[47px] h-[47px] mr-[24px] bg-[#B7AFC0] hover:bg-[#442862] text-white font-bold py-2 px-4 rounded-full'
+      onClick={() => swiperRef.current.slidePrev()}
     >
       <svg
         xmlns='http://www.w3.org/2000/svg'

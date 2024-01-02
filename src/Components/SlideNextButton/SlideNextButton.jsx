@@ -1,14 +1,11 @@
 "use client";
-import { React } from "react";
-import { useSwiper } from "swiper/react";
+import { React, useRef } from "react";
 
-export default function SlideNextButton() {
-  const swiper = useSwiper();
-
+const SlideNextButton = ({ swiperRef }) => {
   return (
     <button
-      className='absolute top-0 right-0 cursor-pointer w-[47px] h-[47px] mr-[24px] bg-[#B7AFC0] hover:bg-[#442862] text-white font-bold py-2 px-4 rounded-full'
-      onClick={() => swiper.slideNext()}
+      className=' cursor-pointer w-[47px] h-[47px] mr-[24px] bg-[#B7AFC0] hover:bg-[#442862] text-white font-bold py-2 px-4 rounded-full'
+      onClick={() => swiperRef.current.slideNext()}
     >
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -34,4 +31,5 @@ export default function SlideNextButton() {
       </svg>
     </button>
   );
-}
+};
+export default SlideNextButton;

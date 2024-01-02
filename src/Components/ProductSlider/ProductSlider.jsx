@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Navigation } from "swiper/modules";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,12 +26,20 @@ const ProductSlider = () => {
 
     image: "https://i.ibb.co/wKFKPvJ/pngegg-1.png",
   };
+  const swiperRef = useRef();
 
   return (
     <div>
       <Swiper
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
         spaceBetween={30}
         slidesPerView={1}
+        navigation={{
+          nextEl: ".review-swiper-button-next",
+          prevEl: ".review-swiper-button-prev",
+        }}
         breakpoints={{
           576: {
             slidesPerView: 2,
@@ -45,9 +53,12 @@ const ProductSlider = () => {
         }}
         modules={[Navigation]}
       >
-        <SlidePrevButton></SlidePrevButton>
-        <SlideNextButton></SlideNextButton>
-        <SwiperSlide>
+        {productsData.map((product, index) => (
+          <SwiperSlide key={index} singleProduct={product}>
+            <SingleProductCard singleProduct={product}></SingleProductCard>
+          </SwiperSlide>
+        ))}
+        {/* <SwiperSlide>
           <SingleProductCard singleProduct={product}></SingleProductCard>
         </SwiperSlide>
         <SwiperSlide>
@@ -64,8 +75,13 @@ const ProductSlider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <SingleProductCard singleProduct={product}></SingleProductCard>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
+
+      <div className='absolute top-[110px] right-0 xl:right-[80px]'>
+        <SlidePrevButton swiperRef={swiperRef}></SlidePrevButton>
+        <SlideNextButton swiperRef={swiperRef}></SlideNextButton>
+      </div>
     </div>
   );
 };
