@@ -1,19 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 import Header from "@/Components/Header/Header";
-import React from "react";
+import React, { useState } from "react";
 
 const CartPage = () => {
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <div>
       <Header title={"Cart"}></Header>
-      <section className='container mx-auto my-[76px]'>
+      <section className='container mx-auto my-[40px] md:my-[76px]'>
         <h5 className='text-[#000] text-[30px] font-semibold mb-2'>Cart</h5>
         <p className='text-[#535353] text-[17px] font-normal mb-8'>
           View and checkout your cart for your stores.
         </p>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-11 '>
           <div className='lg:col-span-2 lg:row-span-2'>
-            <div className='pt-[26px] pb-[49px] px-[37px] bg-[#fff] shadow-fourth rounded-[20px]  '>
+            <div className='pt-[26px] pb-[17px] px-[37px] bg-[#fff] shadow-fourth rounded-[20px]  '>
               <div className='flex items-center justify-between border-b-[1px] border-[#EBEBEB] overflow-x-auto '>
                 <div className='flex items-center gap-[7px] pb-[28px] '>
                   <button>
@@ -40,271 +42,286 @@ const CartPage = () => {
                 <p className='text-[#000] text-[20px] font-medium'>$1,230.00</p>
               </div>
 
-              <div className='flex items-center justify-between border-b-[1px] border-[#EBEBEB] '>
-                <div className='flex items-center gap-[11px] py-[18px] '>
-                  <button>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='16'
-                      height='10'
-                      viewBox='0 0 16 10'
-                      fill='none'
-                    >
-                      <path
-                        d='M14.7415 1.54379L8.32487 7.96046L1.9082 1.54379'
-                        stroke='black'
-                        stroke-width='2.5'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                      />
-                    </svg>
-                  </button>
-                  <div className='md:flex items-center gap-[28px]'>
-                    <img src='/clipart396725 1.png' alt='' />
-                    <h5 className='text-[#000] text-[17px] font-medium  '>
-                      Stash House Distribution
-                    </h5>
-                  </div>
-                  <div className='text-white text-[15px] w-[56px] font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
-                    Med
-                  </div>
-                </div>
-                <p className='text-[#535353] text-[17px] font-medium'>
-                  $1,030.00
-                </p>
-              </div>
-              <div className='overflow-x-auto w-full'>
-                <div className='pl-[31px] py-[32px] border-b-[1px] border-[#EBEBEB] w-full'>
-                  <div className='flex gap-[15px] mb-[28px]'>
-                    <h5 className='text-[#000] text-[17px] font-medium'>
-                      Packwoods
-                    </h5>
-                    <div className='text-white text-[15px] font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
-                      Med
-                    </div>
-                  </div>
-                  <div className='flex items-center justify-between  '>
-                    <div className='flex gap-[18px] min-w-[360px]'>
-                      <img
-                        className='w-[106px] h-[120px] rounded-xl'
-                        src='/cart-product-image.png'
-                        alt='img'
-                      />
-                      <div>
-                        <h5 className='text-[#000] text-[17px] font-medium max-w-[206px] mb-[23px]'>
-                          Classic Blunt - Chemdawg - Infused
-                        </h5>
-                        <div className='flex gap-[21px] items-center'>
-                          <input
-                            className='w-[111px]  border-[#E9E9E9] border-[1px] rounded-[5px] py-[11px] px-[16px]'
-                            type='text'
-                            name=''
-                            id=''
-                            placeholder='2'
-                          />
-                          <button>
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              width='20'
-                              height='23'
-                              viewBox='0 0 20 23'
-                              fill='none'
-                            >
-                              <path
-                                fill-rule='evenodd'
-                                clip-rule='evenodd'
-                                d='M19.0207 4.43202C19.4421 4.43202 19.793 4.78194 19.793 5.22718V5.63884C19.793 6.07326 19.4421 6.434 19.0207 6.434H1.06631C0.643817 6.434 0.292969 6.07326 0.292969 5.63884V5.22718C0.292969 4.78194 0.643817 4.43202 1.06631 4.43202H4.225C4.86664 4.43202 5.42505 3.97594 5.56939 3.33245L5.73481 2.59362C5.99188 1.58722 6.83792 0.918808 7.80618 0.918808H12.2798C13.2375 0.918808 14.093 1.58722 14.3406 2.54054L14.5176 3.33137C14.6609 3.97594 15.2193 4.43202 15.862 4.43202H19.0207ZM17.4159 19.4807C17.7457 16.4073 18.3231 9.10569 18.3231 9.03203C18.3442 8.80886 18.2715 8.59761 18.1271 8.42753C17.9722 8.26828 17.7763 8.17404 17.5603 8.17404H2.53387C2.31683 8.17404 2.11032 8.26828 1.96703 8.42753C1.82163 8.59761 1.74999 8.80886 1.76053 9.03203C1.76246 9.04556 1.78318 9.30276 1.81781 9.73274C1.97168 11.6429 2.40023 16.9632 2.67716 19.4807C2.87313 21.3353 4.09003 22.501 5.8527 22.5432C7.2129 22.5746 8.61418 22.5855 10.0471 22.5855C11.3967 22.5855 12.7675 22.5746 14.1698 22.5432C15.9936 22.5118 17.2094 21.3667 17.4159 19.4807Z'
-                                fill='#535353'
-                              />
-                            </svg>
-                          </button>
+              <div className='relative'>
+                <div className='flex items-center justify-between border-b-[1px] border-[#EBEBEB] '>
+                  <div className='flex items-center gap-[11px] py-[18px] '>
+                    <button onClick={() => setIsOpen(!isOpen)}>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='10'
+                        viewBox='0 0 16 10'
+                        fill='none'
+                      >
+                        <path
+                          d='M14.7415 1.54379L8.32487 7.96046L1.9082 1.54379'
+                          stroke='black'
+                          stroke-width='2.5'
+                          stroke-linecap='round'
+                          stroke-linejoin='round'
+                        />
+                      </svg>
+                    </button>
+                    <div>
+                      <div className='md:flex items-center gap-[28px]'>
+                        <img src='/clipart396725 1.png' alt='' />
+                        <div className='md:flex gap-[11px]'>
+                          <h5 className='text-[#000] text-[17px] font-medium  '>
+                            Stash House Distribution
+                          </h5>
+                          <div className='text-white text-[15px] inline-block font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
+                            Med
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div>
-                      <p className='text-[#535353] text-[15px] font-medium mb-[56px]'>
-                        $200.00/Case (10 Units)
-                      </p>
-                      <p className='text-[#000] text-[17px] font-medium text-right'>
-                        $200.00
-                      </p>
-                    </div>
                   </div>
+                  <p className='text-[#535353] text-[17px] font-medium'>
+                    $1,030.00
+                  </p>
                 </div>
-              </div>
-              <div className='overflow-x-auto w-full'>
-                <div className='pl-[31px] py-[32px] border-b-[1px] border-[#EBEBEB] w-full'>
-                  <div className='flex gap-[15px] mb-[28px]'>
-                    <h5 className='text-[#000] text-[17px] font-medium'>
-                      Packwoods
-                    </h5>
-                    <div className='text-white text-[15px] font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
-                      Med
-                    </div>
-                  </div>
-                  <div className='flex items-center justify-between  '>
-                    <div className='flex gap-[18px] min-w-[360px]'>
-                      <img
-                        className='w-[106px] h-[120px] rounded-xl'
-                        src='/cart-product-image.png'
-                        alt='img'
-                      />
-                      <div>
-                        <h5 className='text-[#000] text-[17px] font-medium max-w-[206px] mb-[23px]'>
-                          Classic Blunt - Chemdawg - Infused
+                <div
+                  //   className={`${
+                  //     isOpen
+                  //       ? "block h-full"
+                  //       : "h-0 hidden transition-all duration-300"
+                  //   }`}
+                  className={`menu-content ${isOpen ? "open" : ""}`}
+                >
+                  <div className='overflow-x-auto w-full'>
+                    <div className='pl-[31px] py-[32px] border-b-[1px] border-[#EBEBEB] w-full'>
+                      <div className='flex gap-[15px] mb-[28px]'>
+                        <h5 className='text-[#000] text-[17px] font-medium'>
+                          Packwoods
                         </h5>
-                        <div className='flex gap-[21px] items-center'>
-                          <input
-                            className='w-[111px]  border-[#E9E9E9] border-[1px] rounded-[5px] py-[11px] px-[16px]'
-                            type='text'
-                            name=''
-                            id=''
-                            placeholder='2'
+                        <div className='text-white text-[15px] font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
+                          Med
+                        </div>
+                      </div>
+                      <div className='flex items-center justify-between  '>
+                        <div className='flex gap-[18px] min-w-[360px]'>
+                          <img
+                            className='w-[106px] h-[120px] rounded-xl'
+                            src='/cart-product-image.png'
+                            alt='img'
                           />
-                          <button>
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              width='20'
-                              height='23'
-                              viewBox='0 0 20 23'
-                              fill='none'
-                            >
-                              <path
-                                fill-rule='evenodd'
-                                clip-rule='evenodd'
-                                d='M19.0207 4.43202C19.4421 4.43202 19.793 4.78194 19.793 5.22718V5.63884C19.793 6.07326 19.4421 6.434 19.0207 6.434H1.06631C0.643817 6.434 0.292969 6.07326 0.292969 5.63884V5.22718C0.292969 4.78194 0.643817 4.43202 1.06631 4.43202H4.225C4.86664 4.43202 5.42505 3.97594 5.56939 3.33245L5.73481 2.59362C5.99188 1.58722 6.83792 0.918808 7.80618 0.918808H12.2798C13.2375 0.918808 14.093 1.58722 14.3406 2.54054L14.5176 3.33137C14.6609 3.97594 15.2193 4.43202 15.862 4.43202H19.0207ZM17.4159 19.4807C17.7457 16.4073 18.3231 9.10569 18.3231 9.03203C18.3442 8.80886 18.2715 8.59761 18.1271 8.42753C17.9722 8.26828 17.7763 8.17404 17.5603 8.17404H2.53387C2.31683 8.17404 2.11032 8.26828 1.96703 8.42753C1.82163 8.59761 1.74999 8.80886 1.76053 9.03203C1.76246 9.04556 1.78318 9.30276 1.81781 9.73274C1.97168 11.6429 2.40023 16.9632 2.67716 19.4807C2.87313 21.3353 4.09003 22.501 5.8527 22.5432C7.2129 22.5746 8.61418 22.5855 10.0471 22.5855C11.3967 22.5855 12.7675 22.5746 14.1698 22.5432C15.9936 22.5118 17.2094 21.3667 17.4159 19.4807Z'
-                                fill='#535353'
+                          <div>
+                            <h5 className='text-[#000] text-[17px] font-medium max-w-[206px] mb-[23px]'>
+                              Classic Blunt - Chemdawg - Infused
+                            </h5>
+                            <div className='flex gap-[21px] items-center'>
+                              <input
+                                className='w-[111px]  border-[#E9E9E9] border-[1px] rounded-[5px] py-[11px] px-[16px]'
+                                type='text'
+                                name=''
+                                id=''
+                                placeholder='2'
                               />
-                            </svg>
-                          </button>
+                              <button>
+                                <svg
+                                  xmlns='http://www.w3.org/2000/svg'
+                                  width='20'
+                                  height='23'
+                                  viewBox='0 0 20 23'
+                                  fill='none'
+                                >
+                                  <path
+                                    fill-rule='evenodd'
+                                    clip-rule='evenodd'
+                                    d='M19.0207 4.43202C19.4421 4.43202 19.793 4.78194 19.793 5.22718V5.63884C19.793 6.07326 19.4421 6.434 19.0207 6.434H1.06631C0.643817 6.434 0.292969 6.07326 0.292969 5.63884V5.22718C0.292969 4.78194 0.643817 4.43202 1.06631 4.43202H4.225C4.86664 4.43202 5.42505 3.97594 5.56939 3.33245L5.73481 2.59362C5.99188 1.58722 6.83792 0.918808 7.80618 0.918808H12.2798C13.2375 0.918808 14.093 1.58722 14.3406 2.54054L14.5176 3.33137C14.6609 3.97594 15.2193 4.43202 15.862 4.43202H19.0207ZM17.4159 19.4807C17.7457 16.4073 18.3231 9.10569 18.3231 9.03203C18.3442 8.80886 18.2715 8.59761 18.1271 8.42753C17.9722 8.26828 17.7763 8.17404 17.5603 8.17404H2.53387C2.31683 8.17404 2.11032 8.26828 1.96703 8.42753C1.82163 8.59761 1.74999 8.80886 1.76053 9.03203C1.76246 9.04556 1.78318 9.30276 1.81781 9.73274C1.97168 11.6429 2.40023 16.9632 2.67716 19.4807C2.87313 21.3353 4.09003 22.501 5.8527 22.5432C7.2129 22.5746 8.61418 22.5855 10.0471 22.5855C11.3967 22.5855 12.7675 22.5746 14.1698 22.5432C15.9936 22.5118 17.2094 21.3667 17.4159 19.4807Z'
+                                    fill='#535353'
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <p className='text-[#535353] text-[15px] font-medium mb-[56px]'>
+                            $200.00/Case (10 Units)
+                          </p>
+                          <p className='text-[#000] text-[17px] font-medium text-right'>
+                            $200.00
+                          </p>
                         </div>
                       </div>
                     </div>
-                    <div>
-                      <p className='text-[#535353] text-[15px] font-medium mb-[56px]'>
-                        $200.00/Case (10 Units)
-                      </p>
-                      <p className='text-[#000] text-[17px] font-medium text-right'>
-                        $200.00
-                      </p>
-                    </div>
                   </div>
-                </div>
-              </div>
-              <div className='overflow-x-auto w-full'>
-                <div className='pl-[31px] py-[32px] border-b-[1px] border-[#EBEBEB] w-full'>
-                  <div className='flex gap-[15px] mb-[28px]'>
-                    <h5 className='text-[#000] text-[17px] font-medium'>
-                      Packwoods
-                    </h5>
-                    <div className='text-white text-[15px] font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
-                      Med
-                    </div>
-                  </div>
-                  <div className='flex items-center justify-between  '>
-                    <div className='flex gap-[18px] min-w-[360px]'>
-                      <img
-                        className='w-[106px] h-[120px] rounded-xl'
-                        src='/cart-product-image.png'
-                        alt='img'
-                      />
-                      <div>
-                        <h5 className='text-[#000] text-[17px] font-medium max-w-[206px] mb-[23px]'>
-                          Classic Blunt - Chemdawg - Infused
+                  <div className='overflow-x-auto w-full'>
+                    <div className='pl-[31px] py-[32px] border-b-[1px] border-[#EBEBEB] w-full'>
+                      <div className='flex gap-[15px] mb-[28px]'>
+                        <h5 className='text-[#000] text-[17px] font-medium'>
+                          Packwoods
                         </h5>
-                        <div className='flex gap-[21px] items-center'>
-                          <input
-                            className='w-[111px]  border-[#E9E9E9] border-[1px] rounded-[5px] py-[11px] px-[16px]'
-                            type='text'
-                            name=''
-                            id=''
-                            placeholder='2'
+                        <div className='text-white text-[15px] font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
+                          Med
+                        </div>
+                      </div>
+                      <div className='flex items-center justify-between  '>
+                        <div className='flex gap-[18px] min-w-[360px]'>
+                          <img
+                            className='w-[106px] h-[120px] rounded-xl'
+                            src='/cart-product-image.png'
+                            alt='img'
                           />
-                          <button>
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              width='20'
-                              height='23'
-                              viewBox='0 0 20 23'
-                              fill='none'
-                            >
-                              <path
-                                fill-rule='evenodd'
-                                clip-rule='evenodd'
-                                d='M19.0207 4.43202C19.4421 4.43202 19.793 4.78194 19.793 5.22718V5.63884C19.793 6.07326 19.4421 6.434 19.0207 6.434H1.06631C0.643817 6.434 0.292969 6.07326 0.292969 5.63884V5.22718C0.292969 4.78194 0.643817 4.43202 1.06631 4.43202H4.225C4.86664 4.43202 5.42505 3.97594 5.56939 3.33245L5.73481 2.59362C5.99188 1.58722 6.83792 0.918808 7.80618 0.918808H12.2798C13.2375 0.918808 14.093 1.58722 14.3406 2.54054L14.5176 3.33137C14.6609 3.97594 15.2193 4.43202 15.862 4.43202H19.0207ZM17.4159 19.4807C17.7457 16.4073 18.3231 9.10569 18.3231 9.03203C18.3442 8.80886 18.2715 8.59761 18.1271 8.42753C17.9722 8.26828 17.7763 8.17404 17.5603 8.17404H2.53387C2.31683 8.17404 2.11032 8.26828 1.96703 8.42753C1.82163 8.59761 1.74999 8.80886 1.76053 9.03203C1.76246 9.04556 1.78318 9.30276 1.81781 9.73274C1.97168 11.6429 2.40023 16.9632 2.67716 19.4807C2.87313 21.3353 4.09003 22.501 5.8527 22.5432C7.2129 22.5746 8.61418 22.5855 10.0471 22.5855C11.3967 22.5855 12.7675 22.5746 14.1698 22.5432C15.9936 22.5118 17.2094 21.3667 17.4159 19.4807Z'
-                                fill='#535353'
+                          <div>
+                            <h5 className='text-[#000] text-[17px] font-medium max-w-[206px] mb-[23px]'>
+                              Classic Blunt - Chemdawg - Infused
+                            </h5>
+                            <div className='flex gap-[21px] items-center'>
+                              <input
+                                className='w-[111px]  border-[#E9E9E9] border-[1px] rounded-[5px] py-[11px] px-[16px]'
+                                type='text'
+                                name=''
+                                id=''
+                                placeholder='2'
                               />
-                            </svg>
-                          </button>
+                              <button>
+                                <svg
+                                  xmlns='http://www.w3.org/2000/svg'
+                                  width='20'
+                                  height='23'
+                                  viewBox='0 0 20 23'
+                                  fill='none'
+                                >
+                                  <path
+                                    fill-rule='evenodd'
+                                    clip-rule='evenodd'
+                                    d='M19.0207 4.43202C19.4421 4.43202 19.793 4.78194 19.793 5.22718V5.63884C19.793 6.07326 19.4421 6.434 19.0207 6.434H1.06631C0.643817 6.434 0.292969 6.07326 0.292969 5.63884V5.22718C0.292969 4.78194 0.643817 4.43202 1.06631 4.43202H4.225C4.86664 4.43202 5.42505 3.97594 5.56939 3.33245L5.73481 2.59362C5.99188 1.58722 6.83792 0.918808 7.80618 0.918808H12.2798C13.2375 0.918808 14.093 1.58722 14.3406 2.54054L14.5176 3.33137C14.6609 3.97594 15.2193 4.43202 15.862 4.43202H19.0207ZM17.4159 19.4807C17.7457 16.4073 18.3231 9.10569 18.3231 9.03203C18.3442 8.80886 18.2715 8.59761 18.1271 8.42753C17.9722 8.26828 17.7763 8.17404 17.5603 8.17404H2.53387C2.31683 8.17404 2.11032 8.26828 1.96703 8.42753C1.82163 8.59761 1.74999 8.80886 1.76053 9.03203C1.76246 9.04556 1.78318 9.30276 1.81781 9.73274C1.97168 11.6429 2.40023 16.9632 2.67716 19.4807C2.87313 21.3353 4.09003 22.501 5.8527 22.5432C7.2129 22.5746 8.61418 22.5855 10.0471 22.5855C11.3967 22.5855 12.7675 22.5746 14.1698 22.5432C15.9936 22.5118 17.2094 21.3667 17.4159 19.4807Z'
+                                    fill='#535353'
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <p className='text-[#535353] text-[15px] font-medium mb-[56px]'>
+                            $200.00/Case (10 Units)
+                          </p>
+                          <p className='text-[#000] text-[17px] font-medium text-right'>
+                            $200.00
+                          </p>
                         </div>
                       </div>
                     </div>
-                    <div>
-                      <p className='text-[#535353] text-[15px] font-medium mb-[56px]'>
-                        $200.00/Case (10 Units)
-                      </p>
-                      <p className='text-[#000] text-[17px] font-medium text-right'>
-                        $200.00
-                      </p>
-                    </div>
                   </div>
-                </div>
-              </div>
-              <div className='overflow-x-auto w-full'>
-                <div className='pl-[31px] py-[32px] w-full'>
-                  <div className='flex gap-[15px] mb-[28px]'>
-                    <h5 className='text-[#000] text-[17px] font-medium'>
-                      Packwoods
-                    </h5>
-                    <div className='text-white text-[15px] font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
-                      Med
-                    </div>
-                  </div>
-                  <div className='flex items-center justify-between  '>
-                    <div className='flex gap-[18px] min-w-[360px]'>
-                      <img
-                        className='w-[106px] h-[120px] rounded-xl'
-                        src='/cart-product-image.png'
-                        alt='img'
-                      />
-                      <div>
-                        <h5 className='text-[#000] text-[17px] font-medium max-w-[206px] mb-[23px]'>
-                          Classic Blunt - Chemdawg - Infused
+                  <div className='overflow-x-auto w-full'>
+                    <div className='pl-[31px] py-[32px] border-b-[1px] border-[#EBEBEB] w-full'>
+                      <div className='flex gap-[15px] mb-[28px]'>
+                        <h5 className='text-[#000] text-[17px] font-medium'>
+                          Packwoods
                         </h5>
-                        <div className='flex gap-[21px] items-center'>
-                          <input
-                            className='w-[111px]  border-[#E9E9E9] border-[1px] rounded-[5px] py-[11px] px-[16px]'
-                            type='text'
-                            name=''
-                            id=''
-                            placeholder='2'
+                        <div className='text-white text-[15px] font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
+                          Med
+                        </div>
+                      </div>
+                      <div className='flex items-center justify-between  '>
+                        <div className='flex gap-[18px] min-w-[360px]'>
+                          <img
+                            className='w-[106px] h-[120px] rounded-xl'
+                            src='/cart-product-image.png'
+                            alt='img'
                           />
-                          <button>
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              width='20'
-                              height='23'
-                              viewBox='0 0 20 23'
-                              fill='none'
-                            >
-                              <path
-                                fill-rule='evenodd'
-                                clip-rule='evenodd'
-                                d='M19.0207 4.43202C19.4421 4.43202 19.793 4.78194 19.793 5.22718V5.63884C19.793 6.07326 19.4421 6.434 19.0207 6.434H1.06631C0.643817 6.434 0.292969 6.07326 0.292969 5.63884V5.22718C0.292969 4.78194 0.643817 4.43202 1.06631 4.43202H4.225C4.86664 4.43202 5.42505 3.97594 5.56939 3.33245L5.73481 2.59362C5.99188 1.58722 6.83792 0.918808 7.80618 0.918808H12.2798C13.2375 0.918808 14.093 1.58722 14.3406 2.54054L14.5176 3.33137C14.6609 3.97594 15.2193 4.43202 15.862 4.43202H19.0207ZM17.4159 19.4807C17.7457 16.4073 18.3231 9.10569 18.3231 9.03203C18.3442 8.80886 18.2715 8.59761 18.1271 8.42753C17.9722 8.26828 17.7763 8.17404 17.5603 8.17404H2.53387C2.31683 8.17404 2.11032 8.26828 1.96703 8.42753C1.82163 8.59761 1.74999 8.80886 1.76053 9.03203C1.76246 9.04556 1.78318 9.30276 1.81781 9.73274C1.97168 11.6429 2.40023 16.9632 2.67716 19.4807C2.87313 21.3353 4.09003 22.501 5.8527 22.5432C7.2129 22.5746 8.61418 22.5855 10.0471 22.5855C11.3967 22.5855 12.7675 22.5746 14.1698 22.5432C15.9936 22.5118 17.2094 21.3667 17.4159 19.4807Z'
-                                fill='#535353'
+                          <div>
+                            <h5 className='text-[#000] text-[17px] font-medium max-w-[206px] mb-[23px]'>
+                              Classic Blunt - Chemdawg - Infused
+                            </h5>
+                            <div className='flex gap-[21px] items-center'>
+                              <input
+                                className='w-[111px]  border-[#E9E9E9] border-[1px] rounded-[5px] py-[11px] px-[16px]'
+                                type='text'
+                                name=''
+                                id=''
+                                placeholder='2'
                               />
-                            </svg>
-                          </button>
+                              <button>
+                                <svg
+                                  xmlns='http://www.w3.org/2000/svg'
+                                  width='20'
+                                  height='23'
+                                  viewBox='0 0 20 23'
+                                  fill='none'
+                                >
+                                  <path
+                                    fill-rule='evenodd'
+                                    clip-rule='evenodd'
+                                    d='M19.0207 4.43202C19.4421 4.43202 19.793 4.78194 19.793 5.22718V5.63884C19.793 6.07326 19.4421 6.434 19.0207 6.434H1.06631C0.643817 6.434 0.292969 6.07326 0.292969 5.63884V5.22718C0.292969 4.78194 0.643817 4.43202 1.06631 4.43202H4.225C4.86664 4.43202 5.42505 3.97594 5.56939 3.33245L5.73481 2.59362C5.99188 1.58722 6.83792 0.918808 7.80618 0.918808H12.2798C13.2375 0.918808 14.093 1.58722 14.3406 2.54054L14.5176 3.33137C14.6609 3.97594 15.2193 4.43202 15.862 4.43202H19.0207ZM17.4159 19.4807C17.7457 16.4073 18.3231 9.10569 18.3231 9.03203C18.3442 8.80886 18.2715 8.59761 18.1271 8.42753C17.9722 8.26828 17.7763 8.17404 17.5603 8.17404H2.53387C2.31683 8.17404 2.11032 8.26828 1.96703 8.42753C1.82163 8.59761 1.74999 8.80886 1.76053 9.03203C1.76246 9.04556 1.78318 9.30276 1.81781 9.73274C1.97168 11.6429 2.40023 16.9632 2.67716 19.4807C2.87313 21.3353 4.09003 22.501 5.8527 22.5432C7.2129 22.5746 8.61418 22.5855 10.0471 22.5855C11.3967 22.5855 12.7675 22.5746 14.1698 22.5432C15.9936 22.5118 17.2094 21.3667 17.4159 19.4807Z'
+                                    fill='#535353'
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <p className='text-[#535353] text-[15px] font-medium mb-[56px]'>
+                            $200.00/Case (10 Units)
+                          </p>
+                          <p className='text-[#000] text-[17px] font-medium text-right'>
+                            $200.00
+                          </p>
                         </div>
                       </div>
                     </div>
-                    <div>
-                      <p className='text-[#535353] text-[15px] font-medium mb-[56px]'>
-                        $200.00/Case (10 Units)
-                      </p>
-                      <p className='text-[#000] text-[17px] font-medium text-right'>
-                        $200.00
-                      </p>
+                  </div>
+                  <div className='overflow-x-auto w-full'>
+                    <div className='pl-[31px] py-[32px] w-full'>
+                      <div className='flex gap-[15px] mb-[28px]'>
+                        <h5 className='text-[#000] text-[17px] font-medium'>
+                          Packwoods
+                        </h5>
+                        <div className='text-white text-[15px] font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
+                          Med
+                        </div>
+                      </div>
+                      <div className='flex items-center justify-between  '>
+                        <div className='flex gap-[18px] min-w-[360px]'>
+                          <img
+                            className='w-[106px] h-[120px] rounded-xl'
+                            src='/cart-product-image.png'
+                            alt='img'
+                          />
+                          <div>
+                            <h5 className='text-[#000] text-[17px] font-medium max-w-[206px] mb-[23px]'>
+                              Classic Blunt - Chemdawg - Infused
+                            </h5>
+                            <div className='flex gap-[21px] items-center'>
+                              <input
+                                className='w-[111px]  border-[#E9E9E9] border-[1px] rounded-[5px] py-[11px] px-[16px]'
+                                type='text'
+                                name=''
+                                id=''
+                                placeholder='2'
+                              />
+                              <button>
+                                <svg
+                                  xmlns='http://www.w3.org/2000/svg'
+                                  width='20'
+                                  height='23'
+                                  viewBox='0 0 20 23'
+                                  fill='none'
+                                >
+                                  <path
+                                    fill-rule='evenodd'
+                                    clip-rule='evenodd'
+                                    d='M19.0207 4.43202C19.4421 4.43202 19.793 4.78194 19.793 5.22718V5.63884C19.793 6.07326 19.4421 6.434 19.0207 6.434H1.06631C0.643817 6.434 0.292969 6.07326 0.292969 5.63884V5.22718C0.292969 4.78194 0.643817 4.43202 1.06631 4.43202H4.225C4.86664 4.43202 5.42505 3.97594 5.56939 3.33245L5.73481 2.59362C5.99188 1.58722 6.83792 0.918808 7.80618 0.918808H12.2798C13.2375 0.918808 14.093 1.58722 14.3406 2.54054L14.5176 3.33137C14.6609 3.97594 15.2193 4.43202 15.862 4.43202H19.0207ZM17.4159 19.4807C17.7457 16.4073 18.3231 9.10569 18.3231 9.03203C18.3442 8.80886 18.2715 8.59761 18.1271 8.42753C17.9722 8.26828 17.7763 8.17404 17.5603 8.17404H2.53387C2.31683 8.17404 2.11032 8.26828 1.96703 8.42753C1.82163 8.59761 1.74999 8.80886 1.76053 9.03203C1.76246 9.04556 1.78318 9.30276 1.81781 9.73274C1.97168 11.6429 2.40023 16.9632 2.67716 19.4807C2.87313 21.3353 4.09003 22.501 5.8527 22.5432C7.2129 22.5746 8.61418 22.5855 10.0471 22.5855C11.3967 22.5855 12.7675 22.5746 14.1698 22.5432C15.9936 22.5118 17.2094 21.3667 17.4159 19.4807Z'
+                                    fill='#535353'
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <p className='text-[#535353] text-[15px] font-medium mb-[56px]'>
+                            $200.00/Case (10 Units)
+                          </p>
+                          <p className='text-[#000] text-[17px] font-medium text-right'>
+                            $200.00
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

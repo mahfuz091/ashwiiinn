@@ -323,18 +323,25 @@ td:first-child {
   -webkit-overflow-scrolling: touch;
 }
 
-/* <div className='grid grid-cols-1 lg:grid-cols-2 gap-[106px]'>
-<div>
-  <div>
-    <label htmlFor=''>Order Notes</label>
-    <input
-      className='w-full h-[58px] border-[1px] border-[#E6E6E6]'
-      type='text'
-    />
-  </div>
-  <div>
-    <label htmlFor=''>Order Notes</label>
-    <input type='text' />
-  </div>
-</div>
-</div> */
+.top-menu {
+  position: relative;
+}
+
+.menu-content {
+  opacity: 0;
+  visibility: hidden;
+  /* position: absolute;
+  top: 100%;
+  left: 0; */
+  width: 100%;
+
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+  overflow: hidden;
+  height: 0;
+}
+
+.menu-content.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
