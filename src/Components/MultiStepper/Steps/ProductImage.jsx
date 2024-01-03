@@ -46,9 +46,10 @@ const ProductImage = () => {
       <form action='' className='form-container'>
         <div>
           <div
+            className='p-[20px] md:p-[98px]'
             style={{
               border: "1px dashed #9B9B9B",
-              padding: "98px",
+
               textAlign: "center",
               cursor: "pointer",
               borderRadius: "10px",

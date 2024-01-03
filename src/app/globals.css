@@ -64,6 +64,9 @@ body {
   padding: 17px 22px;
   margin-top: 13px;
 }
+.input-primary:focus {
+  outline: none;
+}
 
 .form-container select,
 .form-control select {
@@ -138,7 +141,7 @@ body {
 .thm-btn {
   padding: 17px 33px;
   border-radius: 50px;
-  background: var(--Primary, #6bcb77);
+  background: var(--Primary, #6bcb77) !important;
   color: #fff;
   font-size: 17px;
   font-style: normal;
@@ -146,6 +149,11 @@ body {
   line-height: 20px;
   /* 117.647% */
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.thm-btn:hover {
+  background: var(--Primary, #59b965) !important;
 }
 
 .btn-secondary {
@@ -250,8 +258,6 @@ body {
 }
 .details-select option {
   border-radius: 10px !important;
-  position: absolute;
-  top: 50px;
 }
 
 .details-select option:hover {
@@ -259,6 +265,10 @@ body {
   color: #000 !important; /* Text color of options */
 }
 
+.details-select:focus {
+  border: none;
+  outline: none;
+}
 .poduct-details-img::after {
   position: absolute;
   content: "";

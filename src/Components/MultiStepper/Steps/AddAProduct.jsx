@@ -10,10 +10,12 @@ const AddAProduct = ({ onSubmit }) => {
           Add A Product
         </h4>
         <select
-          className='py-[17px] pl-[20px] pr-[40px] md:pl-[33px] md:pr-[64px] bg-[#6BCB77] rounded-[30px] text-[#fff] text-[13px] md:text-[17px] font-semibold'
+          className='py-[17px] pl-[20px] pr-[40px] outline-none  md:pl-[33px] md:pr-[64px] bg-[#6BCB77] rounded-[30px] text-[#fff] text-[13px] md:text-[17px] font-semibold'
           name=''
           id=''
         >
+          <option value=''>Pick a Product Template</option>
+          <option value=''>Pick a Product Template</option>
           <option value=''>Pick a Product Template</option>
         </select>
       </div>
@@ -119,7 +121,7 @@ const AddAProduct = ({ onSubmit }) => {
           </div>
         </div>
         <div className='mt-[40px] text-right'>
-          <button className='thm-btn ' type='submit'>
+          <button className='thm-btn' type='submit'>
             Next
           </button>
         </div>
