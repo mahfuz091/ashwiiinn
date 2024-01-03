@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-
 import AddAProduct from "../Steps/AddAProduct";
 import ProductSpec from "../Steps/ProductSpec";
 import Inventory from "../Steps/Inventory";
