@@ -246,13 +246,17 @@ body {
   background-size: center;
   background-repeat: no-repeat;
   background-position: right 27px center;
+  background-color: #ffb800;
+}
+.details-select option {
+  border-radius: 10px !important;
+  position: absolute;
+  top: 50px;
 }
 
-.details-select option {
-  background-color: #fff !important;
-  color: #333 !important;
-  padding: 6px !important;
-  border-radius: 10px !important;
+.details-select option:hover {
+  background-color: #fff !important; /* Background color of options */
+  color: #000 !important; /* Text color of options */
 }
 
 .poduct-details-img::after {

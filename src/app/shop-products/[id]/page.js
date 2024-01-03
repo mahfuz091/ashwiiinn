@@ -31,13 +31,17 @@ const SingleProductPage = ({ params }) => {
               <p className='text-[#000] text-[15px] font-medium text-center mb-[15px]'>
                 Freeze Dried Powder
               </p>
-              <select
-                className='details-select w-full py-[25px] pl-[26px] pr-[75px] md:pr-[142px] bg-[#FFB800] rounded-[40px] text-[#000] text-[20px] font-semibold focus:border-none mb-[25px]'
-                name=''
-                id=''
-              >
-                <option value=''>Organic Dragon Fruit</option>
-              </select>
+              <div className='relative'>
+                <select
+                  className='details-select w-full py-[25px] pl-[26px] pr-[75px] md:pr-[142px]  rounded-[40px] text-[#000] text-[20px] font-semibold focus:border-none mb-[25px]'
+                  name=''
+                  id=''
+                >
+                  <option value=''>Organic Dragon Fruit</option>
+                  <option value=''>Organic Dragon Fruit</option>
+                  <option value=''>Organic Dragon Fruit</option>
+                </select>
+              </div>
               <p className='text-[#000] text-[20px] font-medium text-center'>
                 $28.99 per bag
               </p>
