@@ -1,8 +1,21 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const SingleBrandProduct = ({ product }) => {
   console.log(product);
+  const [value, setValue] = useState(5);
+  const setIncrease = () => {
+    setValue(parseInt(value) + 1);
+  };
+  const setDecrease = () => {
+    if (value > 1) {
+      setValue(parseInt(value) - 1);
+    }
+  };
+
+  const formatNumber = (num) => {
+    return num.toString().padStart(2, "0");
+  };
   return (
     <div className='py-[37px] border-b-[1px] border-b-[#DBDBDB] last:border-none flex flex-col sm:flex-row justify-between sm:items-center gap-4'>
       <div className='flex flex-col md:flex-row md:items-center gap-[26px]'>
@@ -49,7 +62,10 @@ const SingleBrandProduct = ({ product }) => {
       </div>
       <div>
         <div className='flex  w-[201px] items-center gap-[37px] p-2 border-[2px] border-[#6BCB77] rounded-[42px]'>
-          <button className='flex justify-center items-center w-[41px] h-[41px] bg-[#6BCB77] rounded-full'>
+          <button
+            onClick={() => setDecrease()}
+            className='flex justify-center items-center w-[41px] h-[41px] bg-[#6BCB77] rounded-full'
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='15'
@@ -65,8 +81,13 @@ const SingleBrandProduct = ({ product }) => {
               />
             </svg>
           </button>
-          <p className='text-[24px] text-[#000] font-medium'>05</p>
-          <button className='flex justify-center items-center w-[41px] h-[41px] bg-[#6BCB77] rounded-full'>
+          <p className='text-[24px] text-[#000] font-medium'>
+            {formatNumber(value)}
+          </p>
+          <button
+            onClick={() => setIncrease()}
+            className='flex justify-center items-center w-[41px] h-[41px] bg-[#6BCB77] rounded-full'
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='14'

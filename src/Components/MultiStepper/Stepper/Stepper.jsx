@@ -129,7 +129,7 @@ const Stepper = ({ currentStep, steps, setCurrentStep }) => {
     );
   });
   return (
-    <div className='flex items-center justify-between px-6  md:px-[69px] pt-[20px] pb-[35px] mb-16 mt-[54px] bg-[#F5F5F5] rounded-[15px]'>
+    <div className='flex items-center justify-between px-6  md:px-[69px] pt-[20px] pb-[35px] mb-5 md:mb-16 mt-7 md:mt-[54px] bg-[#F5F5F5] rounded-[15px]'>
       {displaySteps}
     </div>
   );

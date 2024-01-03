@@ -1,9 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import Header from "@/Components/Header/Header";
 import ProductSlider from "@/Components/ProductSlider/ProductSlider";
-import SlideNextButton from "@/Components/SlideNextButton/SlideNextButton";
 import React from "react";
-// import { useSwiper } from "swiper/react";
 
 const SingleProductPage = ({ params }) => {
   const { title } = params;

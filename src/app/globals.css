@@ -261,7 +261,7 @@ body {
 }
 
 .details-select option:hover {
-  background-color: #fff !important; /* Background color of options */
+  background-color: red !important; /* Background color of options */
   color: #000 !important; /* Text color of options */
 }
 
