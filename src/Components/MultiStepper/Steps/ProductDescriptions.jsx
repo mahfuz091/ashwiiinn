@@ -131,7 +131,9 @@ const ProductDescriptions = ({ onSubmit, currentStep, setCurrentStep }) => {
                 placeholder='0.00'
               />
             </div>
-            <button className='thm-btn mt-[24px]'>Add Custom Menu Price</button>
+            <div className='thm-btn mt-[24px] inline-block'>
+              Add Custom Menu Price
+            </div>
           </div>
         </div>
         <div className='mt-[35px] md:grid grid-cols-2'>

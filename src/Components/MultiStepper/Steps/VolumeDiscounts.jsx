@@ -52,7 +52,9 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
             </p>
           </div>
           <div className='mt-[40px]'>
-            <button className='thm-btn'>Add Another Discount Threshold</button>
+            <div className='thm-btn inline-block cursor-pointer'>
+              Add Another Discount Threshold
+            </div>
           </div>
         </div>
         <h4 className='text-[#000] text-[30px] font-semibold mt-14 mb-9'>

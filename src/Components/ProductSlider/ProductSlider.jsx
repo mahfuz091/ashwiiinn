@@ -36,10 +36,6 @@ const ProductSlider = () => {
         }}
         spaceBetween={30}
         slidesPerView={1}
-        navigation={{
-          nextEl: ".review-swiper-button-next",
-          prevEl: ".review-swiper-button-prev",
-        }}
         breakpoints={{
           576: {
             slidesPerView: 2,

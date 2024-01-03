@@ -1,10 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import SingleProductCard from "./SingleProductCard";
+import LoadProductData from "@/utils/LoadProductData/LoadProductData";
 
 const ProductsCards = () => {
   const [productsData, SetProductsData] = useState([]);
-
+  const product = LoadProductData();
+  console.log(product);
   useEffect(() => {
     fetch("/products.json")
       .then((res) => res.json())

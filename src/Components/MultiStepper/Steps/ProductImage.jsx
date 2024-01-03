@@ -1,6 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
-
 const ProductImage = () => {
   const [selectedImages, setSelectedImages] = useState([]);
 
