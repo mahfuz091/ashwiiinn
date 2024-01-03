@@ -30,6 +30,10 @@ body {
   background-repeat: no-repeat;
   background-position: right 33px center;
 }
+.select-element option:checked {
+  background-color: #4caf50; /* Change this to your preferred color */
+  color: white; /* Change this to your preferred text color */
+}
 
 @media (max-width: 575px) {
   .addproduct-header select {
@@ -242,6 +246,13 @@ body {
   background-size: center;
   background-repeat: no-repeat;
   background-position: right 27px center;
+}
+
+.details-select option {
+  background-color: #fff !important;
+  color: #333 !important;
+  padding: 6px !important;
+  border-radius: 10px !important;
 }
 
 .poduct-details-img::after {
