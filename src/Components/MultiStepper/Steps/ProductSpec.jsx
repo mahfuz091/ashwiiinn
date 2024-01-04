@@ -55,7 +55,7 @@ const ProductSpec = ({ onSubmit, currentStep, setCurrentStep }) => {
                   className='w-full input-primary mb-[12px] md:mb-0'
                   name=''
                   id=''
-                  {...register("")}
+                  {...register("unit")}
                 >
                   <option value=''>---------</option>
                 </select>
