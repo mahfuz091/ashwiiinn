@@ -51,6 +51,7 @@ const Stepper = ({ currentStep, steps, setCurrentStep }) => {
     const current = updateStep(currentStep - 1, stepRef.current);
     setNewStep(current);
   }, [steps, currentStep]);
+
   const displaySteps = newStep.map((step, index) => {
     return (
       <div
@@ -58,10 +59,10 @@ const Stepper = ({ currentStep, steps, setCurrentStep }) => {
         className={
           index !== newStep.length - 1
             ? "w-full flex items-center mt-14"
-            : " flex items-center mt-14"
+            : "flex items-center mt-14"
         }
       >
-        <div className='relative flex flex-col items-center '>
+        <div className='relative flex flex-col items-center'>
           <div
             className={`absolute -top-[100px] text-center mt-16 w-8 mx-2 md:w-32 lg:w-64 text-[9px] sm:text-[12px] md:text-[15px] ${
               step.heighlighted

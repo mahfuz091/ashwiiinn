@@ -12,8 +12,8 @@ const Header = ({ title }) => {
         <div className='flex items-center gap-[6px]'>
           <Link className='home-link' href='/'>
             Home
-          </Link>{" "}
-          <Image src={arrow.src} width='16' height='16' alt='' />{" "}
+          </Link>
+          <Image src={arrow.src} width='16' height='16' alt='' />
           <span className='link-title'>{title}</span>
         </div>
       </div>

@@ -19,7 +19,7 @@ const MoonDustPage = () => {
         </div>
         <div className='moondust-desc px-6 md:px-[70px] lg:px-[120px] xl:px-[180px] mb-16 md:mb-[116px]'>
           <div className='flex justify-between items-center '>
-            <h3 className='uppercase text-[25px] md:text-[40px] font-semibold '>
+            <h3 className='uppercase text-[25px] md:text-[40px] font-semibold'>
               Moon Dust
             </h3>
             <div>

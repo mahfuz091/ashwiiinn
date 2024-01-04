@@ -122,12 +122,17 @@ const ProductDescriptions = ({ onSubmit, currentStep, setCurrentStep }) => {
           <div className='form-control w-full'>
             <label htmlFor=''>Custom Menu Price</label>
             <div className='md:grid grid-cols-2 gap-[42px]'>
-              <select className='w-full input-primary' name='' id=''>
+              <select
+                className='w-full input-primary'
+                name=''
+                id=''
+                {...register("customMenuPriceS")}
+              >
                 <option value=''></option>
               </select>
               <input
                 className='w-full input-primary'
-                {...register("field1")}
+                {...register("customMenuPrice")}
                 placeholder='0.00'
               />
             </div>
@@ -141,13 +146,21 @@ const ProductDescriptions = ({ onSubmit, currentStep, setCurrentStep }) => {
         <div className='mt-[35px] md:grid grid-cols-2'>
           <div className='form-control w-full'>
             <label htmlFor=''>Cost of Goods Sold</label>
-            <input className='w-full input-primary' {...register("field1")} />
+            <input
+              className='w-full input-primary'
+              {...register("costGoodsSold")}
+            />
           </div>
         </div>
         <div className='md:grid grid-cols-2 gap-[44px] mt-[35px]'>
           <div className='form-control w-full'>
             <label htmlFor=''>Product Packaging</label>
-            <select className='w-full input-primary mb-[24px]' name='' id=''>
+            <select
+              className='w-full input-primary mb-[24px]'
+              name=''
+              id=''
+              {...register("productPackaging")}
+            >
               <option value=''>-------</option>
             </select>
             <a className='text-[#6BCB77] text-[17px] ' href='#'>
@@ -156,7 +169,12 @@ const ProductDescriptions = ({ onSubmit, currentStep, setCurrentStep }) => {
           </div>
           <div className='form-control w-full'>
             <label htmlFor=''>Shipping Temperature</label>
-            <select className='w-full input-primary' name='' id=''>
+            <select
+              className='w-full input-primary'
+              name=''
+              id=''
+              {...register("shippingTemp")}
+            >
               <option value=''>--------</option>
             </select>
           </div>

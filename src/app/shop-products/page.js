@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Header from "@/Components/Header/Header";
 import ProductsCards from "@/Components/ProductsCards/ProductsCards";
 
@@ -17,7 +16,7 @@ const ShopProductsPage = () => {
                 <input
                   className='pl-[52px] py-[26px] w-full  rounded-[15px] bg-[#F6F6F6] border-[1px] border-[#D1D1D1] '
                   type='text'
-                  placeholder='Search....'
+                  placeholder='Search...'
                 />
                 <span className='absolute top-[26px] left-[27px]'>
                   <svg
@@ -56,7 +55,7 @@ const ShopProductsPage = () => {
             </div>
           </form>
         </div>
-        <h4 className='text-[35px] text-[#000] font-semibold text-center mt-[81px] mb-[36px]'>
+        <h4 className='text-[35px] text-[#000] font-semibold text-center mt-[40px] md:mt-[81px] mb-[36px]'>
           Shop Proudcts
         </h4>
 

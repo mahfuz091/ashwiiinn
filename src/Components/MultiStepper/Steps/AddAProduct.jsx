@@ -5,7 +5,7 @@ const AddAProduct = ({ onSubmit }) => {
   const { register, handleSubmit, getValues, onChange } = useForm();
   return (
     <div className='mb-[65px]'>
-      <div className='addproduct-header  flex justify-between items-center'>
+      <div className='addproduct-header flex justify-between items-center'>
         <h4 className='text-[#000] text-[15px] md:text-[30px] font-semibold'>
           Add A Product
         </h4>

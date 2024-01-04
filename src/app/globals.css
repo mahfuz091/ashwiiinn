@@ -135,7 +135,6 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  /* 117.647% */
 }
 
 .thm-btn {
@@ -147,7 +146,6 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
-  /* 117.647% */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -165,7 +163,6 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
-  /* 117.647% */
   cursor: pointer;
 }
 
@@ -260,11 +257,6 @@ body {
   border-radius: 10px !important;
 }
 
-.details-select option:hover {
-  background-color: red !important; /* Background color of options */
-  color: #000 !important; /* Text color of options */
-}
-
 .details-select:focus {
   border: none;
   outline: none;
@@ -279,12 +271,6 @@ body {
   padding: 7px;
 }
 
-/* @media (min-width: 1680px) {
-  .details-banner .container {
-    padding-top: 88px;
-    padding-bottom: 71px;
-  }
-} */
 .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
   margin-top: -80px;
   padding-top: 80px;
@@ -302,7 +288,7 @@ table {
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px; /* 120% */
+  line-height: 18px;
 }
 .wishlist-table table td {
   text-align: center;
@@ -358,11 +344,7 @@ td:first-child {
 .menu-content {
   opacity: 0;
   visibility: hidden;
-  /* position: absolute;
-  top: 100%;
-  left: 0; */
   width: 100%;
-
   transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   overflow: hidden;
   height: 0;

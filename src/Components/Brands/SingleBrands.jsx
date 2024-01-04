@@ -7,7 +7,7 @@ const SingleBrands = ({ product }) => {
         <img
           className='rounded-[10px] w-[189px] h-[189px]'
           src={product.image}
-          alt=''
+          alt='productImage'
         />
         <div className='max-w-[373px]'>
           <h4 className='text-[24px] text-[#442862] font-medium mb-[17px]'>

@@ -18,7 +18,12 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
           <div className='md:grid grid-cols-3'>
             <div className='form-control w-full'>
               <label htmlFor=''>Type of Discount</label>
-              <select className='w-full input-primary' name='' id=''>
+              <select
+                className='w-full input-primary'
+                name=''
+                id=''
+                {...register("discountPercentage")}
+              >
                 <option value=''>By Percent (%)</option>
               </select>
             </div>
@@ -27,7 +32,7 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
             <span className='text-[#000] text-[15px] font-normal mt-[25px]'>
               If a customer buys
             </span>
-            <div className='form-control md:w-[302px]  '>
+            <div className='form-control md:w-[302px]'>
               <label htmlFor=''>Product Line</label>
               <input
                 className='w-full input-primary'
@@ -38,11 +43,11 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
             <p className='text-[#000] text-[15px] font-normal mt-[25px]'>
               or more, the customer will get
             </p>
-            <div className='form-control md:w-[302px] '>
+            <div className='form-control md:w-[302px]'>
               <label htmlFor=''>Product Line</label>
               <input
                 className='w-full input-primary'
-                {...register("field1")}
+                {...register("productLinePercentage")}
                 placeholder='%'
               />
             </div>
@@ -97,8 +102,15 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
           <div className='md:grid grid-cols-2 gap-x-[42px] gap-y-[35px] mt-[35px]'>
             <div className='form-control w-full'>
               <label htmlFor=''>Decreasing quantity threshold</label>
-              <select className='w-full input-primary' name='' id=''>
+              <select
+                className='w-full input-primary'
+                name=''
+                id=''
+                {...register("DecreasingQtyThreshold")}
+              >
                 <option value=''>0</option>
+                <option value=''>1</option>
+                <option value=''>2</option>
               </select>
               <p className='mt-[14px] text-[13px] text-[#535353] font-normal'>
                 If a products available quantity reaches this value or below,
@@ -109,7 +121,7 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
               <label htmlFor=''>Threshold Action</label>
               <input
                 className='w-full input-primary'
-                {...register("field1")}
+                {...register("thresholdAction")}
                 placeholder='Keep visible bu prevent orders (Default)'
               />
               <p className='mt-[14px] text-[13px] text-[#535353] font-normal w-full'>
@@ -119,7 +131,10 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
             </div>
             <div className='form-control w-full'>
               <label htmlFor=''>Increasing Quantity Threshold</label>
-              <input className='w-full input-primary' {...register("field1")} />
+              <input
+                className='w-full input-primary'
+                {...register("increasingThreshold")}
+              />
               <p className='mt-[14px] text-[13px] text-[#535353] font-normal w-full'>
                 If a products available quantity reaches this value or below,
                 take the selected action.
@@ -129,7 +144,7 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
               <label htmlFor=''>Threshold Action</label>
               <input
                 className='w-full input-primary'
-                {...register("field1")}
+                {...register("thresholdAction")}
                 placeholder='Do nothing (Default)'
               />
               <p className='mt-[14px] text-[13px] text-[#535353] font-normal w-full'>

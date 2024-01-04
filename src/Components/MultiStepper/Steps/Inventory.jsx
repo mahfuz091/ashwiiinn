@@ -39,7 +39,12 @@ const Inventory = ({ onSubmit, currentStep, setCurrentStep }) => {
           </div>
           <div className='form-control w-full'>
             <label htmlFor=''>Inventory Management</label>
-            <select className='w-full input-primary' name='' id=''>
+            <select
+              className='w-full input-primary'
+              name=''
+              id=''
+              {...register("inventoryMnagement")}
+            >
               <option value=''>Managed</option>
             </select>
           </div>
@@ -49,7 +54,10 @@ const Inventory = ({ onSubmit, currentStep, setCurrentStep }) => {
             <label className='w-full' htmlFor=''>
               Total Available Inventory
             </label>
-            <input className='w-full input-primary' {...register("field1")} />
+            <input
+              className='w-full input-primary'
+              {...register("totalAvailableInventory")}
+            />
             <p className='mt-[14px] text-[13px] text-[#535353] font-normal w-full'>
               The amount of physical inventory on your shelf. This number will
               change as your fulfill orders.
@@ -59,13 +67,16 @@ const Inventory = ({ onSubmit, currentStep, setCurrentStep }) => {
             <label htmlFor=''>Min Order</label>
             <input
               className='w-full input-primary'
-              {...register("field1")}
+              {...register("minOrder")}
               placeholder='1.0'
             />
           </div>
           <div className='form-control w-full'>
-            <label htmlFor=''>Inventory Management</label>
-            <input className='w-full input-primary' {...register("field1")} />
+            <label htmlFor=''>Max Order</label>
+            <input className='w-full input-primary' {...register("maxOrder")} />
+            <p className='mt-[14px] text-[13px] text-[#535353] font-normal w-full'>
+              Leave this field empty to allow buyers to order any quantity.
+            </p>
           </div>
         </div>
         <div className='md:grid grid-cols-3 gap-[44px] mt-[33px]'>
@@ -73,7 +84,10 @@ const Inventory = ({ onSubmit, currentStep, setCurrentStep }) => {
             <label className='w-full' htmlFor=''>
               Low Inventory Alert Threshold
             </label>
-            <input className='w-full input-primary' {...register("field1")} />
+            <input
+              className='w-full input-primary'
+              {...register("lowInventoryAlert")}
+            />
             <p className='mt-[14px] text-[13px] text-[#535353] font-normal w-full'>
               An email will be sent when available inventory (i.e. total
               inventory minus any reserved inventory) reaches or drops below the

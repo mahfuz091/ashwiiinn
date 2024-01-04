@@ -55,6 +55,7 @@ const ProductSpec = ({ onSubmit, currentStep, setCurrentStep }) => {
                   className='w-full input-primary mb-[12px] md:mb-0'
                   name=''
                   id=''
+                  {...register("")}
                 >
                   <option value=''>---------</option>
                 </select>
@@ -69,7 +70,10 @@ const ProductSpec = ({ onSubmit, currentStep, setCurrentStep }) => {
           </div>
           <div className='form-control w-full col-span-2'>
             <label htmlFor=''>Product Line</label>
-            <input className='w-full input-primary' {...register("field1")} />
+            <input
+              className='w-full input-primary'
+              {...register("productLine")}
+            />
           </div>
         </div>
         <div className='md:grid grid-cols-3 gap-[44px] mt-[45px]'>
@@ -85,6 +89,7 @@ const ProductSpec = ({ onSubmit, currentStep, setCurrentStep }) => {
               instead of individual units.
             </p>
           </div>
+
           <div>
             <div className='flex gap-[10px] items-center '>
               <input className='checkbox-round' type='checkbox' name='' id='' />

@@ -48,7 +48,7 @@ const SingleProductPage = ({ params }) => {
               <form action=''>
                 <div className='form-control'>
                   <label
-                    className='text-[#000] text-[17px] font-medium '
+                    className='text-[#000] text-[17px] font-medium'
                     htmlFor=''
                   >
                     Quantity
@@ -79,19 +79,19 @@ const SingleProductPage = ({ params }) => {
           </div>
           <div className='flex justify-center items-center gap-[23px] mt-[29px] '>
             <div>
-              <img src='/Mask group (2).png' alt='' />
+              <img src='/Mask group (2).png' alt='product' />
             </div>
             <div>
-              <img src='/Mask group (2).png' alt='' />
+              <img src='/Mask group (2).png' alt='product' />
             </div>
             <div className='w-[48px] h-[48px] bg-[#0B8771] rounded-full flex justify-center items-center poduct-details-img'>
               <img className='rounded-[12px]' src='/125 copy 2.png' alt='' />
             </div>
             <div>
-              <img src='/Mask group (2).png' alt='' />
+              <img src='/Mask group (2).png' alt='product' />
             </div>
             <div>
-              <img src='/Mask group (2).png' alt='' />
+              <img src='/Mask group (2).png' alt='product' />
             </div>
           </div>
         </div>
