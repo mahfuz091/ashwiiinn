@@ -87,7 +87,7 @@ const ProductImage = () => {
             </label>
           </div>
 
-          <div className='md:grid grid-cols-2 xl:grid-cols-4 gap-[38px] mt-[40px]'>
+          <div className='md:grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[38px] mt-[40px] text-center mx-auto'>
             <div className='border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
               {/* {selectedImages.length > 0 && (
               <div>
@@ -161,7 +161,11 @@ const ProductImage = () => {
 
         <div className='btn-group flex gap-6 mt-[40px]'>
           <input type='submit' value='Save' className='thm-btn' />
-          <button className='btn-secondary'>Cancel</button>
+          <input
+            className='btn-secondary transition-all duration-300 hover:bg-[#F5F5F5] hover:text-[#6bcb77] hover:border-[#F5F5F5]'
+            type='button'
+            value='Cancel'
+          />
         </div>
       </form>
     </div>

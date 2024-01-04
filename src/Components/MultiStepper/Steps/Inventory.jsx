@@ -104,15 +104,13 @@ const Inventory = ({ onSubmit, currentStep, setCurrentStep }) => {
           </div>
         </div>
         <div className='mt-[40px] flex justify-between '>
-          <button
+          <input
             className='thm-btn'
             onClick={() => setCurrentStep(currentStep - 1)}
-          >
-            Prev
-          </button>
-          <button className='thm-btn ' type='submit'>
-            Next
-          </button>
+            type='button'
+            value='Prev'
+          />
+          <input className='thm-btn' type='submit' value='Next' />
         </div>
       </form>
     </div>

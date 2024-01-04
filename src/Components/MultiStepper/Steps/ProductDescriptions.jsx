@@ -90,7 +90,7 @@ const ProductDescriptions = ({ onSubmit, currentStep, setCurrentStep }) => {
             <label htmlFor=''>Wholesale Price</label>
             <input
               className='w-full input-primary'
-              {...register("field1")}
+              {...register("wholesalePrice")}
               placeholder='0.00'
             />
           </div>
@@ -98,7 +98,7 @@ const ProductDescriptions = ({ onSubmit, currentStep, setCurrentStep }) => {
             <label htmlFor=''>Sale Price</label>
             <input
               className='w-full input-primary'
-              {...register("field1")}
+              {...register("salePrice")}
               placeholder='0.00'
             />
             <p className='mt-[14px] text-[13px] text-[#535353] font-normal leading-6'>
@@ -110,7 +110,7 @@ const ProductDescriptions = ({ onSubmit, currentStep, setCurrentStep }) => {
             <label htmlFor=''>Retail Price (MSRP)</label>
             <input
               className='w-full input-primary'
-              {...register("field1")}
+              {...register("retrailPrice")}
               placeholder='0.00'
             />
             <p className='mt-[14px] text-[13px] text-[#535353] font-normal leading-6'>
@@ -131,9 +131,11 @@ const ProductDescriptions = ({ onSubmit, currentStep, setCurrentStep }) => {
                 placeholder='0.00'
               />
             </div>
-            <div className='thm-btn mt-[24px] inline-block'>
-              Add Custom Menu Price
-            </div>
+            <input
+              type='button'
+              value='Add Custom Menu Price'
+              className='thm-btn mt-[24px] inline-block'
+            />
           </div>
         </div>
         <div className='mt-[35px] md:grid grid-cols-2'>
@@ -160,15 +162,14 @@ const ProductDescriptions = ({ onSubmit, currentStep, setCurrentStep }) => {
           </div>
         </div>
         <div className='mt-[40px] flex justify-between '>
-          <button
+          <input
             className='thm-btn'
             onClick={() => setCurrentStep(currentStep - 1)}
-          >
-            Prev
-          </button>
-          <button className='thm-btn ' type='submit'>
-            Next
-          </button>
+            type='button'
+            value='Prev'
+          />
+
+          <input className='thm-btn' type='submit' value='Next' />
         </div>
       </form>
     </div>

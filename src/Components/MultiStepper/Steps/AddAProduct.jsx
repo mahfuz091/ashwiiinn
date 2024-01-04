@@ -121,9 +121,7 @@ const AddAProduct = ({ onSubmit }) => {
           </div>
         </div>
         <div className='mt-[40px] text-right'>
-          <button className='thm-btn' type='submit'>
-            Next
-          </button>
+          <input className='thm-btn' type='submit' value='Next' />
         </div>
       </form>
     </div>

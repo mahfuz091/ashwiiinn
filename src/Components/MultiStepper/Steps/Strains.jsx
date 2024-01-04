@@ -62,7 +62,12 @@ const Strains = ({ onSubmit, currentStep, setCurrentStep }) => {
           </div>
         </div>
         <div className='text-center mt-[65px]'>
-          <a className='thm-btn'>Add Additional Product Specs</a>
+          {/* <a className='thm-btn'>Add Additional Product Specs</a> */}
+          <input
+            className='thm-btn max-[425px]:px-[17px] max-[370px]:text-[15px]'
+            type='button'
+            value='Add Additional Product Specs'
+          />
         </div>
         <div className='mt-[40px] flex justify-between '>
           <button
@@ -71,7 +76,7 @@ const Strains = ({ onSubmit, currentStep, setCurrentStep }) => {
           >
             Prev
           </button>
-          <input className='thm-btn ' type='submit' value='Next' />
+          <input className='thm-btn' type='submit' value='Next' />
         </div>
       </form>
     </div>
