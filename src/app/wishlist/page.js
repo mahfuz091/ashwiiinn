@@ -21,7 +21,7 @@ const WishListPage = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-[38px] mt-[24px] mb-[40px]'>
           <div className='p-[27px] shadow-fourth bg-[#fff] rounded-[20px]'>
             <form action=''>
-              <div className=' relative'>
+              <div className='relative'>
                 <label
                   className='text-[#000] text-[17px] font-medium'
                   htmlFor=''

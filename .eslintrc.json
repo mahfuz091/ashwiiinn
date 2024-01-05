@@ -5,3 +5,5 @@
     "@next/next/no-img-element": "off" // Disable the no-img-element rule
   }
 }
+
+

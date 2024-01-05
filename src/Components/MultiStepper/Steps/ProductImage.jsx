@@ -1,4 +1,28 @@
 import React, { useState } from "react";
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+// a little function to help us with reordering the result
+const reorder = (list, startIndex, endIndex) => {
+  const result = Array.from(list);
+  const [removed] = result.splice(startIndex, 1);
+  result.splice(endIndex, 0, removed);
+
+  return result;
+};
+const grid = 8;
+
+const getItemStyle = (isDragging, draggableStyle) => ({
+  userSelect: "none",
+  padding: grid * 2,
+  margin: `0 0 ${grid}px 0`,
+  background: isDragging ? "lightgreen" : "grey",
+  ...draggableStyle,
+});
+
+const getListStyle = (isDraggingOver) => ({
+  background: isDraggingOver ? "lightblue" : "lightgrey",
+  padding: grid,
+  width: 250,
+});
 const ProductImage = () => {
   const [selectedImages, setSelectedImages] = useState([]);
 
@@ -36,6 +60,22 @@ const ProductImage = () => {
       };
     }
   };
+
+  const onDragEnd = (result) => {
+    if (!result.destination) {
+      return;
+    }
+
+    const reorderedItems = reorder(
+      selectedImages,
+      result.source.index,
+      result.destination.index
+    );
+
+    console.log({ reorderedItems });
+    setSelectedImages(reorderedItems);
+  };
+  console.log(selectedImages);
   return (
     <div className='mb-[65px]'>
       <h4 className='text-[#000] text-[22px] md:text-[30px] font-semibold'>
@@ -86,7 +126,6 @@ const ProductImage = () => {
               </span>
             </label>
           </div>
-
           <div className='md:grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[38px] mt-[40px] text-center mx-auto'>
             <div className='border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
               {/* {selectedImages.length > 0 && (
@@ -143,6 +182,85 @@ const ProductImage = () => {
               )}
             </div>
           </div>
+
+          <DragDropContext onDragEnd={onDragEnd}>
+            <Droppable droppableId='selectedImage'>
+              {(provided, snapshot) => {
+                <div
+                  className='md:grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[38px] mt-[40px] text-center mx-auto'
+                  // {...provided.droppableProps}
+                  provided={provided}
+                  innerRef={provided.innerRef}
+                  style={getListStyle(snapshot.isDraggingOver)}
+                >
+                  {selectedImages.map((image, index) => (
+                    <Draggable
+                      key={index}
+                      draggableId={image.key}
+                      index={index}
+                    >
+                      {(provided, snapshot) => (
+                        <div
+                          className='border-[#9B9B9B] border border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'
+                          innerRef={provided.innerRef}
+                          // {...provided.draggableProps}
+                          // {...provided.dragHandleProps}
+                          provided={provided}
+                          style={getItemStyle(
+                            snapshot.isDragging,
+                            provided.draggableProps.style
+                          )}
+                        >
+                          <img
+                            className='w-[260px] h-[155px]'
+                            src={URL.createObjectURL(image)}
+                            alt='l'
+                          />
+                        </div>
+                      )}
+                    </Draggable>
+                  ))}
+                  {provided.placeholder}
+                  {/* <div className='border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
+                    {selectedImages.length > 0 && (
+                      <img
+                        className='w-[260px] h-[155px]'
+                        src={URL.createObjectURL(selectedImages[0])}
+                        alt='l'
+                      />
+                    )}
+                  </div> */}
+                  {/* <div className='mt-4 md:mt-0 border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
+                    {selectedImages.length > 1 && (
+                      <img
+                        className='w-[260px] h-[155px]'
+                        src={URL.createObjectURL(selectedImages[1])}
+                        alt='l'
+                      />
+                    )}
+                  </div>
+                  <div className='mt-4 md:mt-0 border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
+                    {selectedImages.length > 2 && (
+                      <img
+                        className='w-[260px] h-[155px]'
+                        src={URL.createObjectURL(selectedImages[2])}
+                        alt='l'
+                      />
+                    )}
+                  </div>
+                  <div className='mt-4 md:mt-0 border-[#9B9B9B] border-[1px] border-dashed rounded-[10px] w-[280px] h-[175px] bg-[#F5F5F5] p-2'>
+                    {selectedImages.length > 3 && (
+                      <img
+                        className='w-[260px] h-[155px]'
+                        src={URL.createObjectURL(selectedImages[3])}
+                        alt='l'
+                      />
+                    )}
+                  </div> */}
+                </div>;
+              }}
+            </Droppable>
+          </DragDropContext>
           <ul className='marker:text-[#6BCB77] mt-[40px] list-disc pl-[25px] '>
             <li className='text-[#000] text-[20px] font-medium'>
               700 x 384 minimum dimensions

@@ -14,7 +14,7 @@ const Brands = () => {
       <p className='text-[#535353] text-[15px] font-normal mt-[100px] mb-[20px]'>
         Showing 1 - 32 of 32 results
       </p>
-      <div className='px-[33px] bg-[#F5F5F5] rounded-[15px] '>
+      <div className='px-[33px] bg-[#F5F5F5] rounded-[15px]'>
         {products.map((product, index) => (
           <SingleBrands key={index} product={product}></SingleBrands>
         ))}
