@@ -68,9 +68,9 @@ const CartPage = () => {
                           <h5 className='text-[#000] text-[17px] font-medium  '>
                             Stash House Distribution
                           </h5>
-                          <div className='text-white text-[15px] inline-block font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
+                          <a className='text-white text-[15px] h-fit font-medium bg-[#06F] px-[12.72px] py-[3.64px] rounded-[17px]'>
                             Med
-                          </div>
+                          </a>
                         </div>
                       </div>
                     </div>
