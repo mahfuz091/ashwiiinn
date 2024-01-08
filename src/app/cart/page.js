@@ -79,14 +79,7 @@ const CartPage = () => {
                     $1,030.00
                   </p>
                 </div>
-                <div
-                  //   className={`${
-                  //     isOpen
-                  //       ? "block h-full"
-                  //       : "h-0 hidden transition-all duration-300"
-                  //   }`}
-                  className={`menu-content ${isOpen ? "open" : ""}`}
-                >
+                <div className={`menu-content ${isOpen ? "open" : ""}`}>
                   <div className='overflow-x-auto w-full'>
                     <div className='pl-[31px] py-[32px] border-b-[1px] border-[#EBEBEB] w-full'>
                       <div className='flex gap-[15px] mb-[28px]'>
