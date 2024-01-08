@@ -25,7 +25,7 @@ const Strains = ({ onSubmit, currentStep, setCurrentStep }) => {
             </p>
           </div>
           <div className='form-control w-full'>
-            <label htmlFor=''>Manage Strains</label>
+            <label htmlFor=''>Strains Classification*</label>
             <select className='w-full input-primary' name='' id=''>
               <option value=''></option>
             </select>

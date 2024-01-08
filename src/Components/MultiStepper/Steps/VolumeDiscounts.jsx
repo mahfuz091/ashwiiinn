@@ -33,10 +33,10 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
               If a customer buys
             </span>
             <div className='form-control md:w-[302px]'>
-              <label htmlFor=''>Product Line</label>
+              <label htmlFor=''>Quantity</label>
               <input
                 className='w-full input-primary'
-                {...register("field1")}
+                {...register("quantity")}
                 placeholder='2 (Minimum)'
               />
             </div>
@@ -44,10 +44,10 @@ const VolumeDiscounts = ({ onSubmit, currentStep, setCurrentStep }) => {
               or more, the customer will get
             </p>
             <div className='form-control md:w-[302px]'>
-              <label htmlFor=''>Product Line</label>
+              <label htmlFor=''>Discount</label>
               <input
                 className='w-full input-primary'
-                {...register("productLinePercentage")}
+                {...register("discountPercentage")}
                 placeholder='%'
               />
             </div>

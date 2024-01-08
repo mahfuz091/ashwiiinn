@@ -57,7 +57,7 @@ const ProductSpec = ({ onSubmit, currentStep, setCurrentStep }) => {
                   id=''
                   {...register("unit")}
                 >
-                  <option value=''>---------</option>
+                  <option value=''>1</option>
                 </select>
                 <select className='w-full input-primary' name='' id=''>
                   <option value=''>Unit</option>
@@ -69,11 +69,8 @@ const ProductSpec = ({ onSubmit, currentStep, setCurrentStep }) => {
             </div>
           </div>
           <div className='form-control w-full col-span-2'>
-            <label htmlFor=''>Product Line</label>
-            <input
-              className='w-full input-primary'
-              {...register("productLine")}
-            />
+            <label htmlFor=''>Gram Per Individual Unit*</label>
+            <input className='w-full input-primary' {...register("gpiu")} />
           </div>
         </div>
         <div className='md:grid grid-cols-3 gap-[44px] mt-[45px]'>
