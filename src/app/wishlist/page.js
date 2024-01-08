@@ -171,7 +171,7 @@ const WishListPage = () => {
                     </p>
                   </td>
                   <td>
-                    <div className='flex gap-[11px] -mt-[30px] items-start justify-end'>
+                    <div className='flex gap-[11px] -mt-[25px] items-start justify-end'>
                       <img src='/cart-add.png' alt='' />
                       <img src='/save.png' alt='' />
                     </div>
@@ -217,7 +217,7 @@ const WishListPage = () => {
                     </p>
                   </td>
                   <td>
-                    <div className='flex gap-[11px] -mt-[30px]  items-start justify-end'>
+                    <div className='flex gap-[11px] -mt-[25px]  items-start justify-end'>
                       <img src='/cart-add.png' alt='' />
                       <img src='/save.png' alt='' />
                     </div>
@@ -263,7 +263,7 @@ const WishListPage = () => {
                     </p>
                   </td>
                   <td>
-                    <div className='flex gap-[11px] -mt-[30px]  items-start justify-end'>
+                    <div className='flex gap-[11px] -mt-[25px]  items-start justify-end'>
                       <img src='/cart-add.png' alt='' />
                       <img src='/save.png' alt='' />
                     </div>

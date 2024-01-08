@@ -36,7 +36,7 @@ const Strains = ({ onSubmit, currentStep, setCurrentStep }) => {
             <label htmlFor=''>Value</label>
             <input
               className='w-full input-primary'
-              {...register("field1")}
+              {...register("value")}
               placeholder='0'
             />
             <div className='flex gap-[10px] items-center mt-[22px] '>
