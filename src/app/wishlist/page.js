@@ -173,7 +173,7 @@ const WishListPage = () => {
                   <td>
                     <div className='flex gap-[11px] -mt-[25px] items-start justify-end'>
                       <img src='/cart-add.png' alt='' />
-                      <img src='/save.png' alt='' />
+                      <img src='/Heart.svg' alt='' />
                     </div>
                   </td>
                 </tr>
@@ -219,7 +219,7 @@ const WishListPage = () => {
                   <td>
                     <div className='flex gap-[11px] -mt-[25px]  items-start justify-end'>
                       <img src='/cart-add.png' alt='' />
-                      <img src='/save.png' alt='' />
+                      <img src='/Heart.svg' alt='' />
                     </div>
                   </td>
                 </tr>
